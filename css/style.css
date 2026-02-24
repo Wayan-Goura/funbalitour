@@ -1,0 +1,98 @@
+/* Styling Navbar Custom */
+.custom-nav {
+    background-color: transparent !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.tracking-wider {
+    letter-spacing: 2px;
+}
+
+/* Ukuran & Warna Link */
+.navbar-nav .nav-link {
+    font-size: 1.1rem; /* Memperbesar font sedikit */
+    color: rgba(0, 0, 0, 0.9) !important;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Animasi Garis Bawah saat Hover */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 10%;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 80%;
+}
+
+/* Language Switcher Styling */
+.lang-link {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.lang-link.active, .lang-link:hover {
+    color: #000000;
+}
+
+/* Shadow pada logo agar lebih pop-out */
+.brand-logo {
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
+}
+
+/* Responsif Mobile: Navbar dapat background gelap saat dibuka di HP */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 15px;
+    }
+}
+
+/* Styling Hero Section */
+.hero {
+    min-height: 100vh; /* Memastikan tinggi seukuran layar */
+    width: 100%;
+    /* Ganti path ke gambar background utama kamu */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), 
+                url('../images/bgh1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Membuat efek parallax saat di-scroll */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Memastikan navbar benar-benar transparan di awal */
+.navbar.bg-transparent {
+    background-color: transparent !important;
+    border: none;
+}
+
+/* Jarak antar huruf untuk judul */
+.ls-2 {
+    letter-spacing: 5px;
+}
+
+/* Search bar agar lebih modern di mobile */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .rounded-pill {
+        border-radius: 20px !important; /* Di HP kotak lebih enak dilihat */
+    }
+}
