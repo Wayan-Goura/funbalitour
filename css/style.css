@@ -1,98 +1,229 @@
-/* Styling Navbar Custom */
-.custom-nav {
-    background-color: transparent !important;
-    transition: all 0.3s ease-in-out;
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+
+:root {
+    --nav-bg: rgba(255, 255, 255, 0.25); 
+    --accent-color: #007bff;
+    --text-color: #1a1a1a;
 }
 
-.tracking-wider {
-    letter-spacing: 2px;
-}
-
-/* Ukuran & Warna Link */
-.navbar-nav .nav-link {
-    font-size: 1.1rem; /* Memperbesar font sedikit */
-    color: rgba(0, 0, 0, 0.9) !important;
-    position: relative;
-    transition: color 0.3s;
-}
-
-/* Animasi Garis Bawah saat Hover */
-.navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 5px;
-    left: 10%;
-    background-color: #fff;
-    transition: width 0.3s;
-}
-
-.navbar-nav .nav-link:hover::after {
-    width: 80%;
-}
-
-/* Language Switcher Styling */
-.lang-link {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.6);
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.lang-link.active, .lang-link:hover {
-    color: #000000;
-}
-
-/* Shadow pada logo agar lebih pop-out */
-.brand-logo {
-    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
-}
-
-/* Responsif Mobile: Navbar dapat background gelap saat dibuka di HP */
-@media (max-width: 991.98px) {
-    .navbar-collapse {
-        background: rgba(0, 0, 0, 0.9);
-        padding: 20px;
-        border-radius: 15px;
-        margin-top: 15px;
-    }
-}
-
-/* Styling Hero Section */
-.hero {
-    min-height: 100vh; /* Memastikan tinggi seukuran layar */
+.navbar-custom {
+    position: fixed;
+    top: 15px;
     width: 100%;
-    /* Ganti path ke gambar background utama kamu */
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), 
-                url('../images/bgh1.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Membuat efek parallax saat di-scroll */
+    z-index: 1050;
+}
+
+/* Ukuran Logo */
+.logo-img {
+    height: 80px; /* Sedikit disesuaikan agar proporsional */
+    width: auto;
+}
+
+/* Box Navbar Desktop - Dibuat Melebar */
+.nav-box-container {
+    background: var(--nav-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 40px;
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    
+    /* Trick agar box melebar mendekati kiri-kanan */
+    flex-grow: 1; 
+    margin: 0 30px; 
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-/* Memastikan navbar benar-benar transparan di awal */
-.navbar.bg-transparent {
-    background-color: transparent !important;
-    border: none;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 45px; 
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
-/* Jarak antar huruf untuk judul */
-.ls-2 {
-    letter-spacing: 5px;
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* Search bar agar lebih modern di mobile */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 3rem;
+/* Dropdown Desktop Effect */
+.dropdown-custom { position: relative; }
+
+.dropdown-custom i {
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.dropdown-custom:hover i {
+    transform: rotate(180deg); /* Panah berputar saat hover */
+}
+
+.dropdown-menu-custom {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: white;
+    list-style: none;
+    padding: 15px;
+    border-radius: 15px;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.dropdown-custom:hover .dropdown-menu-custom {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu-custom li a {
+    font-size: 0.95rem;
+    padding: 10px;
+    text-transform: capitalize;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+/* Tombol Reservasi (Dibuat Lebih Kecil & Fit) */
+.btn-reservasi {
+    background-color: var(--accent-color);
+    color: #fff !important;
+    padding: 12px 25px; /* Lebih ringkas dari sebelumnya */
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    transition: 0.4s;
+    white-space: nowrap;
+}
+/* --- SCALE CORRECTION FOR MOBILE --- */
+
+@media (max-width: 991.98px) {
+    /* 1. Logo Utama di Header Mobile */
+    .logo-img {
+        height: 200px !important; /* Ukuran logo di bar atas */
+        width: auto;
     }
-    .rounded-pill {
-        border-radius: 20px !important; /* Di HP kotak lebih enak dilihat */
+
+    /* 2. Tombol Hamburger */
+    .hamburger-btn .bar {
+        width: 90px;
+        height: 20px;
+        margin: 7px 0;
+        background-color: #333;
+    }
+    /* 1. Kontainer Utama Offcanvas (Background Putih) */
+    .custom-offcanvas {
+        height: 100vh !important;     /* Full layar ke bawah */
+        max-height: 100vh !important; /* Memastikan tidak terpotong */
+        width: 100% !important;       /* Full lebar ke samping */
+        top: 0 !important;            /* Mulai dari paling atas (0 jarak) */
+        background-color: #ffffff !important;
+        border: none !important;      /* Hapus garis pinggir jika ada */
+        border-radius: 0 !important;  /* Opsional: hapus rounded jika ingin benar-benar kotak full */
+    }
+
+    /* 2. Header (Tempat Logo & Tombol Close) */
+    .custom-offcanvas .offcanvas-header {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between !important; /* Tombol close tetap di kanan, logo bisa diatur */
+        align-items: center;
+        z-index: 1060;
+    }
+
+    /* 3. Body (Tempat List Menu) */
+    .custom-offcanvas .offcanvas-body {
+        padding-top: 240px !important; /* Ruang agar teks di bawah logo */
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        overflow-y: auto;              /* Biar bisa di-scroll jika menu sangat panjang */
+    }
+
+    /* 4. Menempatkan Logo secara spesifik (jika logo di dalam header) */
+    .custom-offcanvas .offcanvas-header img {
+        height: 80px; /* Atur besar logo di dalam canvas */
+        width: auto;
     }
 }
+
+    /* 4. UKURAN TEKS MENU MOBILE (Dibuat Lebih Besar & Jelas) */
+    .mobile-nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-nav-links li {
+        margin-bottom: 40px; /* Jarak antar menu yang lega */
+    }
+
+    .mobile-nav-links li a {
+        font-size: 2.6rem !important; /* Ukuran teks diperbesar */
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--text-color);
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 1px;
+    }
+
+    /* 5. Submenu (Tours Dropdown) */
+    .submenu-mobile {
+        padding-left: 20px;
+        margin-top: 20px;
+        list-style: none;
+        border-left: 3px solid var(--accent-color); /* Garis aksen agar manis */
+    }
+
+    .submenu-mobile li {
+        margin-bottom: 20px;
+    }
+
+    .submenu-mobile li a {
+        font-size: 2.5rem !important;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: #666;
+    }
+
+    /* 6. Button Reservasi di Mobile */
+    .btn-reservasi.w-100 {
+        padding: 20px !important;
+        font-size: 1.2rem !important;
+        font-weight: 700;
+        border-radius: 100px;
+        margin-top: 10px;
+        background-color: var(--accent-color);
+        box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+        display: flex;            
+        justify-content: center;  
+        align-items: center;      
+        text-align: center;      
+        text-decoration: none;
+    }
