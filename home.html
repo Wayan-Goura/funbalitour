@@ -2,22 +2,165 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>Fun Bali Tour</title>
 </head>
 <body>
 
     <div data-include="components/navbar.html"></div>
-    <section class="hero-section d-flex align-items-center">
-        <div class="container text-center">
-            <h1 class="display-4 fw-bold">Discover Bali with Us</h1>
-            <p class="lead mt-3">Your Ultimate Guide to Unforgettable Bali Tours and Activities</p>
+
+    <section class="hero-slider-section">
+    <div class="hero-bg-overlay"></div>
+    
+    <div class="container-fluid h-100 position-relative" style="z-index: 5;">
+        <div class="row align-items-center h-100">
+            
+            <div class="col-lg-5 col-12 text-column px-5">
+                <div class="text-content">
+                    <h5 class="location-tag">EXPLORE INDONESIA</h5>
+                    <h1 class="main-title">BALI <span class="text-bold">ADVENTURE</span></h1>
+                    <p class="description">Jelajahi keindahan tersembunyi Pulau Dewata dengan paket eksklusif yang dirancang khusus untuk petualangan Anda.</p>
+                    
+                    <div class="action-buttons d-flex align-items-center mt-4">
+                        <a href="tour.html" class="btn-discover text-decoration-none">SEE MORE</a>
+                        <button class="btn-bookmark ms-3"><i class="bi bi-bookmark-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 col-12 slider-container-right">
+                <div class="slider-wrapper-blurred">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            
+                            <div class="swiper-slide">
+                                <div class="card-tour">
+                                    <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.9</div>
+                                    <img src="images/tour1.jpg" alt="Ubud">
+                                    <div class="card-info">
+                                        <h4>Ubud Zen</h4>
+                                        <p>Ketenangan sawah terasering dan hutan monyet.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card-tour">
+                                    <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.8</div>
+                                    <img src="images/tour2.jpg" alt="Nusa Penida">
+                                    <div class="card-info">
+                                        <h4>Nusa Penida</h4>
+                                        <p>Pantai Kelingking dan air laut kristal.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card-tour">
+                                    <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.7</div>
+                                    <img src="images/tour3.jpg" alt="Uluwatu">
+                                    <div class="card-info">
+                                        <h4>Uluwatu Cliff</h4>
+                                        <p>Pertunjukan tari Kecak di atas tebing laut.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card-tour">
+                                    <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.8</div>
+                                    <img src="images/tour4.jpg" alt="Kintamani">
+                                    <div class="card-info">
+                                        <h4>Mount Batur</h4>
+                                        <p>Mendaki matahari terbit di puncak gunung.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card-tour">
+                                    <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.9</div>
+                                    <img src="images/tour5.jpg" alt="Bedugul">
+                                    <div class="card-info">
+                                        <h4>Bedugul Lake</h4>
+                                        <p>Pura Ulun Danu Beratan yang ikonik.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card-tour">
+                                    <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.6</div>
+                                    <img src="images/tour6.jpg" alt="Lovina">
+                                    <div class="card-info">
+                                        <h4>Lovina Dolphin</h4>
+                                        <p>Melihat lumba-lumba di laut lepas utara.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card-tour">
+                                    <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.8</div>
+                                    <img src="images/tour7.jpg" alt="Padangbai">
+                                    <div class="card-info">
+                                        <h4>Blue Lagoon</h4>
+                                        <p>Snorkeling terbaik di perairan Padangbai.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-controls-bottom">
+                    <div class="nav-arrows">
+                        <button class="nav-btn-minimal prev-btn"><i class="bi bi-chevron-left"></i></button>
+                        <button class="nav-btn-minimal next-btn"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <div class="slide-number">01</div>
+                </div>
+            </div>
+
         </div>
+    </div>
+</section>
 
     <div data-include="components/footer.html"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script> </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper(".mySwiper", {
+    // Menampilkan 3 foto (1 utuh di tengah, 2 setengah di kiri-kanan)
+    slidesPerView: 3, 
+    centeredSlides: true,
+    
+    // Jarak antar foto (buat angka ini lebih besar jika ingin lebih jauh)
+    spaceBetween: 50, 
+    
+    loop: true,
+    speed: 1000,
+    grabCursor: true,
+
+    navigation: {
+        nextEl: ".next-btn",
+        prevEl: ".prev-btn",
+    },
+
+    // Memastikan transisi terasa "berat" dan elegan
+    watchSlidesProgress: true,
+});
+        });
+    </script>
+    <script src="js/script.js"></script> 
+</body>
 </html>

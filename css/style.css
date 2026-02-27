@@ -1,4 +1,3 @@
-/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
@@ -16,13 +15,11 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     z-index: 1050;
 }
 
-/* Ukuran Logo */
 .logo-img {
-    height: 80px; /* Sedikit disesuaikan agar proporsional */
+    height: 80px; 
     width: auto;
 }
 
-/* Box Navbar Desktop - Dibuat Melebar */
 .nav-box-container {
     background: var(--nav-bg);
     backdrop-filter: blur(15px);
@@ -32,7 +29,6 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     border-radius: 100px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     
-    /* Trick agar box melebar mendekati kiri-kanan */
     flex-grow: 1; 
     margin: 0 30px; 
     display: flex;
@@ -60,7 +56,6 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     gap: 8px;
 }
 
-/* Dropdown Desktop Effect */
 .dropdown-custom { position: relative; }
 
 .dropdown-custom i {
@@ -69,7 +64,7 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 }
 
 .dropdown-custom:hover i {
-    transform: rotate(180deg); /* Panah berputar saat hover */
+    transform: rotate(180deg); 
 }
 
 .dropdown-menu-custom {
@@ -101,48 +96,67 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     border-bottom: 1px solid #f8f9fa;
 }
 
-/* Tombol Reservasi (Dibuat Lebih Kecil & Fit) */
 .btn-reservasi {
-    background-color: var(--accent-color);
+    background: linear-gradient(to bottom, #e66239 0%, #D84B20 100%);
+    background-size: 100% 200%;
+    background-position: top;
+    
     color: #fff !important;
-    padding: 12px 25px; /* Lebih ringkas dari sebelumnya */
+    padding: 12px 28px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
     display: inline-block;
-    transition: 0.4s;
     white-space: nowrap;
+    
+    border: 1px solid rgba(216, 75, 32, 0.4); 
+    
+    box-shadow: 0 4px 15px rgba(216, 75, 32, 0.2);
+    
+    transition: background-position 0.4s ease, box-shadow 0.4s ease;
+}
+
+.btn-reservasi:hover {
+    background-position: bottom; /* Bergeser ke warna yang lebih solid */
+    box-shadow: 0 6px 20px rgba(216, 75, 32, 0.3);
+}
+
+@media (max-width: 991.98px) {
+    .btn-reservasi.w-100 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px !important;
+        font-size: 1.2rem !important;
+    }
 }
 /* --- SCALE CORRECTION FOR MOBILE --- */
 
 @media (max-width: 991.98px) {
-    /* 1. Logo Utama di Header Mobile */
     .logo-img {
-        height: 200px !important; /* Ukuran logo di bar atas */
+        height: 200px !important; 
         width: auto;
     }
 
-    /* 2. Tombol Hamburger */
     .hamburger-btn .bar {
         width: 90px;
         height: 20px;
         margin: 7px 0;
         background-color: #333;
     }
-    /* 1. Kontainer Utama Offcanvas (Background Putih) */
     .custom-offcanvas {
-        height: 100vh !important;     /* Full layar ke bawah */
-        max-height: 100vh !important; /* Memastikan tidak terpotong */
-        width: 100% !important;       /* Full lebar ke samping */
-        top: 0 !important;            /* Mulai dari paling atas (0 jarak) */
+        height: 100vh !important;     
+        max-height: 100vh !important; 
+        width: 100% !important;       
+        top: 0 !important;            
         background-color: #ffffff !important;
-        border: none !important;      /* Hapus garis pinggir jika ada */
-        border-radius: 0 !important;  /* Opsional: hapus rounded jika ingin benar-benar kotak full */
+        border: none !important;      
+        border-radius: 0 !important;  
     }
 
-    /* 2. Header (Tempat Logo & Tombol Close) */
     .custom-offcanvas .offcanvas-header {
         position: absolute;
         width: 100%;
@@ -150,27 +164,24 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
         left: 0;
         padding: 20px 30px;
         display: flex;
-        justify-content: space-between !important; /* Tombol close tetap di kanan, logo bisa diatur */
+        justify-content: space-between !important; 
         align-items: center;
         z-index: 1060;
     }
 
-    /* 3. Body (Tempat List Menu) */
     .custom-offcanvas .offcanvas-body {
-        padding-top: 240px !important; /* Ruang agar teks di bawah logo */
+        padding-top: 240px !important; 
         padding-left: 40px !important;
         padding-right: 40px !important;
-        overflow-y: auto;              /* Biar bisa di-scroll jika menu sangat panjang */
+        overflow-y: auto;              
     }
 
-    /* 4. Menempatkan Logo secara spesifik (jika logo di dalam header) */
     .custom-offcanvas .offcanvas-header img {
-        height: 80px; /* Atur besar logo di dalam canvas */
+        height: 80px; 
         width: auto;
     }
 }
 
-    /* 4. UKURAN TEKS MENU MOBILE (Dibuat Lebih Besar & Jelas) */
     .mobile-nav-links {
         list-style: none;
         padding: 0;
@@ -178,11 +189,11 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     }
 
     .mobile-nav-links li {
-        margin-bottom: 40px; /* Jarak antar menu yang lega */
+        margin-bottom: 40px; 
     }
 
     .mobile-nav-links li a {
-        font-size: 2.6rem !important; /* Ukuran teks diperbesar */
+        font-size: 2.6rem !important; 
         font-weight: 700;
         text-transform: uppercase;
         color: var(--text-color);
@@ -193,12 +204,11 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
         letter-spacing: 1px;
     }
 
-    /* 5. Submenu (Tours Dropdown) */
     .submenu-mobile {
         padding-left: 20px;
         margin-top: 20px;
         list-style: none;
-        border-left: 3px solid var(--accent-color); /* Garis aksen agar manis */
+        border-left: 3px solid var(--accent-color); 
     }
 
     .submenu-mobile li {
@@ -212,7 +222,6 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
         color: #666;
     }
 
-    /* 6. Button Reservasi di Mobile */
     .btn-reservasi.w-100 {
         padding: 20px !important;
         font-size: 1.2rem !important;
@@ -227,3 +236,133 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
         text-align: center;      
         text-decoration: none;
     }
+/* --- HERO SECTION FULL --- */
+.hero-slider-section {
+    background: url('../images/bg1.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.hero-bg-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+}
+
+/* Typography Kiri */
+.main-title { 
+    font-size: 5.5rem; 
+    color: white; 
+    line-height: 0.9; 
+    margin: 20px 0; 
+    font-weight: 300; 
+    text-transform: uppercase;
+}
+.text-bold { font-weight: 800; display: block; }
+.location-tag { color: #D84B20; letter-spacing: 4px; font-weight: 700; border-left: 3px solid #D84B20; padding-left: 15px; }
+.description { color: rgba(255,255,255,0.7); max-width: 450px; }
+
+/* Buttons */
+.btn-discover {
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white; padding: 12px 35px; border-radius: 30px; font-size: 0.8rem; letter-spacing: 2px; transition: 0.3s;
+}
+.btn-discover:hover { background: white; color: black; }
+.btn-bookmark { width: 45px; height: 45px; border-radius: 50%; border: none; background: #D84B20; color: white; }
+
+/* --- SLIDER POSITIONING --- */
+.slider-container-right {
+    /* Menurunkan posisi agar tidak tertindih navbar */
+    margin-top: 100px; 
+    /* Menggeser ke kanan agar tidak tertindih teks */
+    padding-left: 80px; 
+}
+
+.slider-wrapper-blurred {
+    position: relative;
+    /* Masking agar menghilang halus saat digeser ke arah teks */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 100%);
+}
+
+.swiper { overflow: visible !important; }
+
+/* --- PHOTO CARD STYLE --- */
+.swiper-slide {
+    width: auto !important;
+    margin-right: 20px !important; /* Jarak antar foto lebih rapat */
+}
+
+.card-tour {
+    width: 270px;
+    height: 380px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    background: none; /* Menghapus background hitam */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    transition: transform 0.4s ease;
+}
+
+.card-tour img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s ease;
+}
+
+.card-tour:hover img { transform: scale(1.1); }
+
+/* Rating */
+.rating-tag {
+    position: absolute;
+    top: 15px; right: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 4px 12px;
+    border-radius: 20px;
+    color: #333;
+    font-weight: 800;
+    font-size: 0.75rem;
+    z-index: 10;
+}
+.rating-tag i { color: #f39c12; margin-right: 4px; }
+
+/* Card Info */
+.card-info {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    padding: 30px 20px;
+    /* Gradasi transparan agar teks terbaca di atas foto */
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, transparent 100%);
+    color: white;
+}
+.card-info h4 { font-size: 1.2rem; font-weight: 700; margin-bottom: 5px; }
+.card-info p { font-size: 0.8rem; opacity: 0.8; margin: 0; line-height: 1.3; }
+
+/* Controls */
+.slider-controls-bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    padding-right: 50px;
+}
+.nav-arrows { display: flex; gap: 10px; }
+.nav-btn-minimal {
+    background: transparent; border: 1px solid rgba(255,255,255,0.3);
+    color: white; width: 45px; height: 45px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; transition: 0.3s;
+}
+.nav-btn-minimal:hover { background: #D84B20; border-color: #D84B20; }
+
+/* Responsive */
+@media (max-width: 991px) {
+    .slider-container-right { padding-left: 15px; margin-top: 40px; }
+    .main-title { font-size: 3.5rem; }
+    .slider-wrapper-blurred { -webkit-mask-image: none; mask-image: none; }
+}
