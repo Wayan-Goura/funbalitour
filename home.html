@@ -41,7 +41,7 @@
                             <div class="swiper-slide">
                                 <div class="card-tour">
                                     <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.9</div>
-                                    <img src="images/tour1.jpg" alt="Ubud">
+                                    <img src="images/ubud.jpg" alt="Ubud">
                                     <div class="card-info">
                                         <h4>Ubud Zen</h4>
                                         <p>Ketenangan sawah terasering dan hutan monyet.</p>
@@ -52,7 +52,7 @@
                             <div class="swiper-slide">
                                 <div class="card-tour">
                                     <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.8</div>
-                                    <img src="images/tour2.jpg" alt="Nusa Penida">
+                                    <img src="images/nusapenida.jpg" alt="Nusa Penida">
                                     <div class="card-info">
                                         <h4>Nusa Penida</h4>
                                         <p>Pantai Kelingking dan air laut kristal.</p>
@@ -63,7 +63,7 @@
                             <div class="swiper-slide">
                                 <div class="card-tour">
                                     <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.7</div>
-                                    <img src="images/tour3.jpg" alt="Uluwatu">
+                                    <img src="images/uluwatu.jpg" alt="Uluwatu">
                                     <div class="card-info">
                                         <h4>Uluwatu Cliff</h4>
                                         <p>Pertunjukan tari Kecak di atas tebing laut.</p>
@@ -74,7 +74,7 @@
                             <div class="swiper-slide">
                                 <div class="card-tour">
                                     <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.8</div>
-                                    <img src="images/tour4.jpg" alt="Kintamani">
+                                    <img src="images/batur.jpg" alt="Kintamani">
                                     <div class="card-info">
                                         <h4>Mount Batur</h4>
                                         <p>Mendaki matahari terbit di puncak gunung.</p>
@@ -85,7 +85,7 @@
                             <div class="swiper-slide">
                                 <div class="card-tour">
                                     <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.9</div>
-                                    <img src="images/tour5.jpg" alt="Bedugul">
+                                    <img src="images/bedugul.jpg" alt="Bedugul">
                                     <div class="card-info">
                                         <h4>Bedugul Lake</h4>
                                         <p>Pura Ulun Danu Beratan yang ikonik.</p>
@@ -96,7 +96,7 @@
                             <div class="swiper-slide">
                                 <div class="card-tour">
                                     <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.6</div>
-                                    <img src="images/tour6.jpg" alt="Lovina">
+                                    <img src="images/lovina.jpg" alt="Lovina">
                                     <div class="card-info">
                                         <h4>Lovina Dolphin</h4>
                                         <p>Melihat lumba-lumba di laut lepas utara.</p>
@@ -107,7 +107,7 @@
                             <div class="swiper-slide">
                                 <div class="card-tour">
                                     <div class="rating-tag"><i class="bi bi-star-fill"></i> 4.8</div>
-                                    <img src="images/tour7.jpg" alt="Padangbai">
+                                    <img src="images/bluelagon.jpg" alt="Padangbai">
                                     <div class="card-info">
                                         <h4>Blue Lagoon</h4>
                                         <p>Snorkeling terbaik di perairan Padangbai.</p>
@@ -161,6 +161,29 @@
 });
         });
     </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const includes = document.querySelectorAll("[data-include]");
+
+    includes.forEach(el => {
+        const file = el.getAttribute("data-include");
+
+        fetch(file)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("File tidak ditemukan: " + file);
+                }
+                return response.text();
+            })
+            .then(data => {
+                el.innerHTML = data;
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    });
+});
+</script>
     <script src="js/script.js"></script> 
 </body>
 </html>

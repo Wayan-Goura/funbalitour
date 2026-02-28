@@ -137,13 +137,13 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 
 @media (max-width: 991.98px) {
     .logo-img {
-        height: 200px !important; 
+        height: 90px !important; 
         width: auto;
     }
 
     .hamburger-btn .bar {
-        width: 90px;
-        height: 20px;
+        width: 25px;
+        height: 2px;
         margin: 7px 0;
         background-color: #333;
     }
@@ -170,7 +170,7 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     }
 
     .custom-offcanvas .offcanvas-body {
-        padding-top: 240px !important; 
+        padding-top: 150px !important; 
         padding-left: 40px !important;
         padding-right: 40px !important;
         overflow-y: auto;              
@@ -193,7 +193,7 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     }
 
     .mobile-nav-links li a {
-        font-size: 2.6rem !important; 
+        font-size: 1.6rem !important; 
         font-weight: 700;
         text-transform: uppercase;
         color: var(--text-color);
@@ -206,7 +206,7 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 
     .submenu-mobile {
         padding-left: 20px;
-        margin-top: 20px;
+        margin-top: 5px;
         list-style: none;
         border-left: 3px solid var(--accent-color); 
     }
@@ -216,7 +216,7 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     }
 
     .submenu-mobile li a {
-        font-size: 2.5rem !important;
+        font-size: 1.5rem !important;
         font-weight: 500;
         text-transform: capitalize;
         color: #666;
