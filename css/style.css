@@ -170,14 +170,14 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     font-size: 7.5rem;
     line-height: 1.1;
     font-weight: bold;
-    color: #D84B20;
+    color: #333;
     text-transform: uppercase;
 }
 
 .title-underline {
     height: 4px;
     width: 128px;
-    background: linear-gradient(to right, #2563eb, #14b8a6);
+    background: linear-gradient(to right, #D84B20, #ebcbc1);
     /* margin-top: 14px; */
     margin-bottom: 30px;
     border-radius: 3px;
@@ -198,7 +198,7 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 
 .info-box h3 {
     font-size: 24px;
-    color: #2563eb;
+    color: #D84B20;
     margin-bottom: 16px;
 }
 
@@ -213,7 +213,7 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 }
 
 .highlight {
-    color: #14b8a6;
+    color: #D84B20;
     font-weight: 600;
 }
 

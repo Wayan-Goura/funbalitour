@@ -21,10 +21,10 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <title>Fun Bali Tour</title>
-    <section class="img about"></section>
+    
   </head>
   <body>
-    <div data-include="components/navbar.html"></div>
+     <div data-include="components/navbar.html"></div>
 
     <section class="header-about">
       <div class="img">
@@ -89,5 +89,57 @@
       </div>
       </div>
     </section>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiperHero = new Swiper(".mySwiper", {
+                slidesPerView: 3, 
+                centeredSlides: true,
+                spaceBetween: 50, 
+                loop: true,
+                speed: 1000,
+                grabCursor: true,
+                navigation: { nextEl: ".next-btn", prevEl: ".prev-btn" },
+                breakpoints: {
+                    567: { slidesPerView: 3, spaceBetween: 70 },
+                    992: { slidesPerView: 3, spaceBetween: 50 }
+                }
+            });
+
+            var swiperPackages = new Swiper(".packageSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            speed: 600,
+            grabCursor: true,      // Kursor berubah jadi tangan agar bisa di-drag
+            simulateTouch: true,   // Memungkinkan scroll dengan klik tahan kursor
+            navigation: { 
+                nextEl: ".next-package", 
+                prevEl: ".prev-package" 
+            },
+            breakpoints: {
+                // Di HP menampilkan 1.2 slide agar user tahu itu bisa di-scroll
+                320: { slidesPerView: 1.1, spaceBetween: 15 }, 
+                576: { slidesPerView: 2, spaceBetween: 20 },
+                992: { slidesPerView: 3, spaceBetween: 25 },
+                1400: { slidesPerView: 4, spaceBetween: 30 }
+            }
+        });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const includes = document.querySelectorAll("[data-include]");
+            includes.forEach(el => {
+                const file = el.getAttribute("data-include");
+                fetch(file).then(res => res.text()).then(data => { el.innerHTML = data; }).catch(err => console.error(err));
+            });
+        });
+    </script>
+    <script src="js/script.js"></script> 
   </body>
 </html>
