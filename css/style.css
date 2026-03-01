@@ -305,9 +305,17 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     border-radius: 25px;
     position: relative;
     overflow: hidden;
-    background: none; /* Menghapus background hitam */
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    background: none;
+    /*Menghapusbackgroundhitam*/box-shadow: 0 15px 35px rgba(0,0,0,0.4);
     transition: transform 0.4s ease;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    -webkit-transition: transform 0.4s ease;
+    -moz-transition: transform 0.4s ease;
+    -ms-transition: transform 0.4s ease;
+    -o-transition: transform 0.4s ease;
 }
 
 .card-tour img {
@@ -315,6 +323,10 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     height: 100%;
     object-fit: cover;
     transition: 0.6s ease;
+    -webkit-transition: 0.6s ease;
+    -moz-transition: 0.6s ease;
+    -ms-transition: 0.6s ease;
+    -o-transition: 0.6s ease;
 }
 
 .card-tour:hover img { transform: scale(1.1); }
@@ -322,7 +334,8 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 /* Rating */
 .rating-tag {
     position: absolute;
-    top: 15px; right: 15px;
+    top: 15px;
+    right: 15px;
     background: rgba(255, 255, 255, 0.95);
     padding: 4px 12px;
     border-radius: 20px;
@@ -330,6 +343,10 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     font-weight: 800;
     font-size: 0.75rem;
     z-index: 10;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 .rating-tag i { color: #f39c12; margin-right: 4px; }
 
@@ -360,9 +377,309 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 }
 .nav-btn-minimal:hover { background: #D84B20; border-color: #D84B20; }
 
-/* Responsive */
 @media (max-width: 991px) {
-    .slider-container-right { padding-left: 15px; margin-top: 40px; }
-    .main-title { font-size: 3.5rem; }
-    .slider-wrapper-blurred { -webkit-mask-image: none; mask-image: none; }
+    .hero-slider-section {
+        height: auto; 
+        min-height: 100vh;
+        padding-top: 140px; 
+        padding-bottom: 60px;
+        display: block; 
+    }
+
+    /* Mengubah posisi teks menjadi Center */
+    .text-column {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        text-align: center; /* Membuat teks rata tengah */
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Memastikan elemen flex di dalamnya ikut ke tengah */
+    }
+
+    .location-tag {
+        border-left: none; /* Menghilangkan garis samping agar simetris */
+        border-bottom: 3px solid #D84B20; /* Opsional: pindahkan garis ke bawah teks */
+        padding-left: 0;
+        padding-bottom: 5px;
+        display: inline-block;
+    }
+
+    .main-title {
+        font-size: 3rem;
+        margin: 15px auto;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto; /* Memastikan paragraf tetap di tengah jika ada max-width */
+    }
+
+    .action-buttons {
+        justify-content: center; /* Tombol See More & Bookmark ke tengah */
+        width: 100%;
+    }
+
+    /* Slider Container */
+    .slider-container-right {
+        padding-left: 0; /* Hilangkan padding samping agar slider seimbang */
+        margin-top: 20px;
+    }
+
+    /* Mengubah posisi menu navigasi < > menjadi Center */
+    .slider-controls-bottom {
+        margin-top: 40px;
+        flex-direction: column; /* Menyusun panah dan angka secara vertikal */
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .nav-arrows {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .slide-number {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* --- SECTION KEDUA: POPULAR TRIPS --- */
+.packages-section {
+    background-color: #ffffff;
+    position: relative;
+}
+
+.fw-800 { font-weight: 800; }
+
+/* Wrapper Slider untuk Ruang Navigasi */
+.swiper-container-wrapper {
+    padding: 0 60px; /* Memberi ruang agar panah tidak menutupi gambar di desktop */
+}
+
+/* Navigasi Tepi Kiri & Kanan (Desktop) */
+.nav-arrow-fixed {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    color: #333;
+}
+
+.nav-arrow-fixed:hover {
+    background: #D84B20;
+    color: white;
+    border-color: #D84B20;
+}
+
+.prev-package { left: 5px; }
+.next-package { right: 5px; }
+
+/* Style Card */
+.package-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-img {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.package-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s ease;
+}
+
+.package-content {
+    padding: 25px 20px;
+    transition: 0.4s ease;
+    flex-grow: 1;
+}
+
+.duration { 
+    font-size: 0.8rem; 
+    color: #888; 
+    font-weight: 600; 
+    text-transform: uppercase;
+}
+
+.package-name { 
+    font-size: 1.2rem; 
+    font-weight: 800; 
+    margin: 8px 0; 
+    color: #222; 
+}
+
+.package-desc { 
+    font-size: 0.9rem; 
+    color: #666; 
+    line-height: 1.5;
+    margin-bottom: 20px; 
+}
+
+.package-price { 
+    margin-top: auto;
+    display: flex; 
+    flex-direction: column; 
+}
+
+.old-price { 
+    text-decoration: line-through; 
+    color: #aaa; 
+    font-size: 0.75rem; 
+}
+
+.current-price { 
+    color: #222; 
+    font-weight: 800; 
+    font-size: 1.1rem; 
+}
+
+/* --- EFEK HOVER: BERUBAH WARNA KE #D84B20 --- */
+.package-card:hover {
+    background-color: #D84B20; /* Warna utama sesuai permintaan */
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(216, 75, 32, 0.3);
+    border-color: #D84B20;
+}
+
+/* Mengubah warna semua teks di dalam card menjadi putih saat hover */
+.package-card:hover .package-name,
+.package-card:hover .package-desc,
+.package-card:hover .duration,
+.package-card:hover .current-price,
+.package-card:hover .old-price {
+    color: white !important;
+}
+
+.package-card:hover .package-img img {
+    transform: scale(1.1);
+}
+
+/* --- RESPONSIVE UNTUK MOBILE (Perbaikan Popular Trips) --- */
+@media (max-width: 991px) {
+    .packages-section {
+        padding: 50px 0; /* Memberi ruang lebih lega */
+    }
+
+    .swiper-container-wrapper {
+        padding: 0 45px; /* Memberi ruang untuk tombol panah di kiri/kanan */
+        position: relative;
+    }
+
+    /* Memunculkan kembali dan menyesuaikan tombol navigasi di mobile */
+    .nav-arrow-fixed {
+        display: flex !important; 
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+        background: white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .prev-package { left: 5px; }
+    .next-package { right: 5px; }
+
+    .section-header {
+        flex-direction: column;
+        align-items: center !important;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Merapikan card agar tidak terlalu lebar atau terlalu kecil */
+    .package-card {
+        margin: 10px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+}
+/* Hanya CSS ini yang perlu ditambahkan di style.css */
+.custom-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    border-bottom: 4px solid #D84B20 !important;
+}
+
+.fw-800 { font-weight: 800; } /* Utility tambahan jika belum ada */
+/* --- TOP THINGS TO DO STYLING --- */
+.bento-grid {
+    height: 700px; /* Tinggi tetap untuk desktop agar bento terlihat rapi */
+}
+
+.activity-card {
+    position: relative;
+    cursor: pointer;
+    border-radius: 20px !important;
+}
+
+.activity-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.activity-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    transition: all 0.4s ease;
+}
+
+/* Hover Effect */
+.activity-card:hover .activity-img {
+    transform: scale(1.1);
+}
+
+.activity-card:hover .activity-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+}
+
+.x-small {
+    font-size: 0.75rem;
+}
+
+/* Responsive Fix */
+@media (max-width: 991px) {
+    .bento-grid {
+        height: auto; /* Biarkan tinggi menyesuaikan di mobile */
+    }
+    .activity-card {
+        height: 300px !important; /* Tinggi seragam di mobile */
+    }
 }
