@@ -105,112 +105,149 @@
         </div>
     </section>
 
-    <section class="packages-section py-5">
-        <div class="container-fluid px-md-5">
-            <div class="section-header d-flex justify-content-between align-items-end mb-4 px-3">
-                <div>
-                    <h6 class="text-uppercase fw-bold" style="color: #D84B20; letter-spacing: 2px; font-size: 0.8rem;">Best Offers</h6>
-                    <h2 class="fw-800" style="font-size: 2.5rem;">Popular <span style="color: #D84B20;">Trips</span></h2>
-                </div>
-                <a href="#" class="btn-view-all text-decoration-none fw-bold">Explore All</a>
+<section class="packages-section py-5 bg-white">
+    <div class="container py-md-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-5 px-2">
+            <div class="text-center text-md-start mb-3 mb-md-0">
+                <h6 class="text-orange fw-bold text-uppercase mb-2" style="letter-spacing: 2px;">Best Offers</h6>
+                <h2 class="display-5 fw-800 mb-0">Popular <span class="text-orange">Trips</span></h2>
             </div>
+            <a href="tours.html" class="btn btn-outline-dark rounded-pill px-4 fw-bold shadow-sm">Explore All <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
 
-            <div class="position-relative swiper-container-wrapper">
-                <button class="nav-arrow-fixed prev-package"><i class="bi bi-chevron-left"></i></button>
-                <button class="nav-arrow-fixed next-package"><i class="bi bi-chevron-right"></i></button>
-
-                <div class="swiper packageSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="detail-tour.html" class="package-card text-decoration-none">
-                                <div class="package-img"><img src="images/bluelagon.jpg" alt="Trip"></div>
-                                <div class="package-content">
-                                    <span class="duration">8 Days</span>
-                                    <h3 class="package-name">Highlights of Italy</h3>
-                                    <p class="package-desc">Experience the best of Amalfi Coast up close.</p>
-                                    <div class="package-price">
-                                        <span class="old-price">From USD $2,100</span>
-                                        <span class="current-price">USD $1,785</span>
-                                    </div>
+        <div class="row row-cols-2 row-cols-md-3 g-3 g-md-4">
+            
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="position-relative">
+                        <img src="images/ubud-tour.jpg" class="card-img-top card-img-custom" alt="Ubud Tour">
+                        <span class="badge-duration">Full Day</span>
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Ubud Cultural & Nature</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Terasering Tegalalang, Monkey Forest, dan makan siang di tepi lembah.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800">IDR 550K</span>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="detail-tour.html" class="package-card text-decoration-none">
-                                <div class="package-img"><img src="images/batur.jpg" alt="Trip"></div>
-                                <div class="package-content">
-                                    <span class="duration">9 Days</span>
-                                    <h3 class="package-name">Premium Peru</h3>
-                                    <p class="package-desc">Farm-to-table experience, Peru style.</p>
-                                    <div class="package-price">
-                                        <span class="old-price">From USD $6,390</span>
-                                        <span class="current-price">USD $5,432</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="detail-tour.html" class="package-card text-decoration-none">
-                                <div class="package-img"><img src="images/bluelagon.jpg" alt="Trip"></div>
-                                <div class="package-content">
-                                    <span class="duration">12 Days</span>
-                                    <h3 class="package-name">Egypt Experience</h3>
-                                    <p class="package-desc">Felucca sleepover club and ancient wonders.</p>
-                                    <div class="package-price"><span class="current-price">USD $3,380</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="detail-tour.html" class="package-card text-decoration-none">
-                                <div class="package-img"><img src="images/bedugul.jpg" alt="Trip"></div>
-                                <div class="package-content">
-                                    <span class="duration">8 Days</span>
-                                    <h3 class="package-name">Galapagos Islands</h3>
-                                    <p class="package-desc">Snorkel with sea lions and giant tortoises.</p>
-                                    <div class="package-price"><span class="current-price">USD $2,450</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="detail-tour.html" class="package-card text-decoration-none">
-                                <div class="package-img"><img src="images/bluelagon.jpg" alt="Trip"></div>
-                                <div class="package-content">
-                                    <span class="duration">10 Days</span>
-                                    <h3 class="package-name">Japan Cultural</h3>
-                                    <p class="package-desc">Authentic tea ceremony and Kyoto shrines.</p>
-                                    <div class="package-price"><span class="current-price">USD $4,100</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="detail-tour.html" class="package-card text-decoration-none">
-                                <div class="package-img"><img src="images/batur.jpg" alt="Trip"></div>
-                                <div class="package-content">
-                                    <span class="duration">7 Days</span>
-                                    <h3 class="package-name">Swiss Alps</h3>
-                                    <p class="package-desc">Hiking through the majestic mountains.</p>
-                                    <div class="package-price"><span class="current-price">USD $3,100</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="detail-tour.html" class="package-card text-decoration-none">
-                                <div class="package-img"><img src="images/batur.jpg" alt="Trip"></div>
-                                <div class="package-content">
-                                    <span class="duration">14 Days</span>
-                                    <h3 class="package-name">African Safari</h3>
-                                    <p class="package-desc">Witness the great migration in Serengeti.</p>
-                                    <div class="package-price"><span class="current-price">USD $5,900</span></div>
-                                </div>
-                            </a>
+                                <a href="detail-tour.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="py-5 bg-light">
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="position-relative">
+                        <img src="images/nusapenida.jpg" class="card-img-top card-img-custom" alt="Nusa Penida">
+                        <span class="badge-duration">Full Day</span>
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Nusa Penida West</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Kelingking Beach, Broken Beach, dan Angel's Billabong yang eksotis.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800">IDR 850K</span>
+                                </div>
+                                <a href="detail-tour.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="position-relative">
+                        <img src="images/uluwatu.jpg" class="card-img-top card-img-custom" alt="Uluwatu Sunset">
+                        <span class="badge-duration">Half Day</span>
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Uluwatu Sunset Kecak</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Menonton tari Kecak di tepi tebing saat matahari terbenam yang magis.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800">IDR 450K</span>
+                                </div>
+                                <a href="detail-tour.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="position-relative">
+                        <img src="images/bedugul.jpg" class="card-img-top card-img-custom" alt="Bedugul Tour">
+                        <span class="badge-duration">Full Day</span>
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Bedugul & Tanah Lot</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Pura Ulun Danu Beratan dan sunset indah di Pura Tanah Lot.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800">IDR 600K</span>
+                                </div>
+                                <a href="detail-tour.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="position-relative">
+                        <img src="images/snorkeling.jpg" class="card-img-top card-img-custom" alt="Snorkeling">
+                        <span class="badge-duration">Full Day</span>
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Blue Lagoon Snorkeling</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Petualangan bawah laut melihat kura-kura dan terumbu karang warna-warni.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800">IDR 500K</span>
+                                </div>
+                                <a href="detail-tour.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="position-relative">
+                        <img src="images/batur-trekking.jpg" class="card-img-top card-img-custom" alt="Mount Batur">
+                        <span class="badge-duration">Sunrise</span>
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Mount Batur Trekking</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Mendaki gunung api aktif untuk melihat sunrise terbaik di Bali.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800">IDR 750K</span>
+                                </div>
+                                <a href="detail-tour.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="py-2 bg-light">
     <div class="container py-md-5">
         
         <div class="text-center mb-5">
@@ -284,7 +321,7 @@
         </div>
     </div>
 </section>
-<section class="py-5 bg-white">
+<section class="py-2 bg-white">
     <div class="container py-md-5">
         <div class="text-center mb-5">
             <h6 class="text-orange fw-bold text-uppercase" style="letter-spacing: 2px;">Experience Bali</h6>
@@ -375,6 +412,134 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-white border-top">
+    <div class="container py-md-5">
+        <div class="row align-items-center g-5">
+            
+            <div class="col-lg-6">
+                <div class="journal-content pe-lg-5">
+                    <h6 class="text-orange fw-bold text-uppercase mb-3" style="letter-spacing: 3px;">The Journal</h6>
+                    <h2 class="display-4 fw-800 mb-4">Every Trip has a <br><span class="text-orange">Great Story</span></h2>
+                    
+                    <div class="journal-text-wrapper border-start border-3 border-orange ps-4 py-2">
+                        <p class="lead italic text-muted mb-4">
+                            "Bali bukan hanya tentang destinasi, tapi tentang bagaimana kamu merasakan detak jantung budayanya dan ketenangan alamnya yang magis."
+                        </p>
+                        <p class="text-secondary mb-5">
+                            Kami mencatat setiap momen perjalanan tamu kami, mulai dari tawa di bawah air terjun tersembunyi hingga keheningan saat matahari terbenam di Uluwatu. Journal ini adalah rangkuman dari memori yang kami bangun bersama Anda.
+                        </p>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-4 mt-4">
+                        <div class="journal-info">
+                            <h4 class="fw-bold mb-0">150+</h4>
+                            <small class="text-muted">Stories Written</small>
+                        </div>
+                        <div class="vr"></div>
+                        <div class="journal-info">
+                            <h4 class="fw-bold mb-0">25k+</h4>
+                            <small class="text-muted">Happy Guests</small>
+                        </div>
+                        <div class="vr"></div>
+                        <a href="journal.html" class="btn btn-link text-dark fw-bold text-decoration-none p-0">
+                            Explore Journal <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <div class="rounded-5 overflow-hidden shadow-lg" style="height: 500px;">
+                        <img src="images/bluelagon.jpg" class="w-100 h-100 object-fit-cover" alt="Journal Photo">
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 translate-middle-x d-none d-md-block" style="width: 200px; height: 200px; margin-bottom: -30px;">
+                        <img src="images/batur.jpg" class="w-100 h-100 object-fit-cover rounded-4 border border-5 border-white shadow" alt="Small Aksen">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-white">
+    <div class="container py-md-5">
+        <div class="row align-items-end mb-5">
+            <div class="col-md-8">
+                <h6 class="text-orange fw-bold text-uppercase mb-2" style="letter-spacing: 2px;">Update & News</h6>
+                <h2 class="display-5 fw-800">From Our <span class="text-orange">Journal</span></h2>
+                <p class="text-muted mb-0">Temukan panduan perjalanan, tips, dan berita terbaru seputar pariwisata di Bali.</p>
+            </div>
+            <div class="col-md-4 text-md-end d-none d-md-block">
+                <a href="blog-list.html" class="btn btn-outline-dark rounded-pill px-4 fw-bold">View All Posts</a>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-sm rounded-5 overflow-hidden h-100 featured-blog">
+                    <div class="position-relative h-100">
+                        <img src="images/blog-main.jpg" class="w-100 h-100 object-fit-cover" alt="Main Blog" style="min-height: 400px;">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end p-4 p-md-5 bg-dark-gradient text-white">
+                            <div class="mb-3">
+                                <span class="badge bg-orange px-3 py-2 rounded-pill">Featured</span>
+                                <span class="ms-2 small opacity-75">March 02, 2026</span>
+                            </div>
+                            <h3 class="fw-bold display-6 mb-3">Panduan Lengkap Eksplorasi Nusa Penida: Tips Agar Tidak Kelelahan</h3>
+                            <p class="opacity-75 mb-4 d-none d-md-block text-truncate-2">Banyak wisatawan yang salah mengatur jadwal saat ke Nusa Penida. Di artikel ini, kami merangkum rute efisien agar Anda bisa menikmati Kelingking Beach tanpa terburu-buru.</p>
+                            <a href="blog-detail-1.html" class="btn btn-light rounded-pill px-4 fw-bold w-fit">Read Full Story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="d-flex flex-column gap-4 h-100">
+                    
+                    <div class="card border-0 shadow-sm rounded-4 p-3 blog-side-item">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-4">
+                                <img src="images/blog-side-1.jpg" class="rounded-3 w-100 object-fit-cover" style="height: 110px;" alt="Side Blog">
+                            </div>
+                            <div class="col-8">
+                                <small class="text-orange fw-bold text-uppercase" style="font-size: 0.7rem;">Cuisine</small>
+                                <h5 class="fw-bold mb-2 mt-1 lh-sm">5 Restoran Halal Terbaik di Kawasan Seminyak</h5>
+                                <a href="blog-detail-2.html" class="text-dark fw-bold small text-decoration-none">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4 p-3 blog-side-item">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-4">
+                                <img src="images/blog-side-2.jpg" class="rounded-3 w-100 object-fit-cover" style="height: 110px;" alt="Side Blog">
+                            </div>
+                            <div class="col-8">
+                                <small class="text-orange fw-bold text-uppercase" style="font-size: 0.7rem;">Adventure</small>
+                                <h5 class="fw-bold mb-2 mt-1 lh-sm">Waktu Terbaik Mendaki Gunung Batur Untuk Pemula</h5>
+                                <a href="blog-detail-3.html" class="text-dark fw-bold small text-decoration-none">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4 p-3 blog-side-item">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-4">
+                                <img src="images/blog-side-3.jpg" class="rounded-3 w-100 object-fit-cover" style="height: 110px;" alt="Side Blog">
+                            </div>
+                            <div class="col-8">
+                                <small class="text-orange fw-bold text-uppercase" style="font-size: 0.7rem;">Tips</small>
+                                <h5 class="fw-bold mb-2 mt-1 lh-sm">Cara Mendapatkan Harga Sewa Mobil Murah di Bali</h5>
+                                <a href="blog-detail-4.html" class="text-dark fw-bold small text-decoration-none">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 </section>
