@@ -300,14 +300,14 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 
 @media (max-width: 991.98px) {
     .logo-img {
-        height: 200px !important; 
+        height: 110px !important; 
         width: auto;
     }
 
     .hamburger-btn .bar {
-        width: 90px;
-        height: 20px;
-        margin: 7px 0;
+        width: 40px;
+        height: 10px;
+        margin: 3px 0;
         background-color: #333;
     }
     .custom-offcanvas {
@@ -333,14 +333,14 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     }
 
     .custom-offcanvas .offcanvas-body {
-        padding-top: 240px !important; 
+        padding-top: 140px !important; 
         padding-left: 40px !important;
         padding-right: 40px !important;
         overflow-y: auto;              
     }
 
     .custom-offcanvas .offcanvas-header img {
-        height: 80px; 
+        height: 20px; 
         width: auto;
     }
 }
@@ -356,7 +356,7 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     }
 
     .mobile-nav-links li a {
-        font-size: 2.6rem !important; 
+        font-size: 1.6rem !important; 
         font-weight: 700;
         text-transform: uppercase;
         color: var(--text-color);
@@ -379,7 +379,7 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     }
 
     .submenu-mobile li a {
-        font-size: 2.5rem !important;
+        font-size: 1.5rem !important;
         font-weight: 500;
         text-transform: capitalize;
         color: #666;
@@ -688,5 +688,53 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 @media (max-width: 768px) {
     .featured-blog .display-6 {
         font-size: 1.5rem;
+    }
+}
+
+/* FOOTER */
+/* Gaya Khusus Footer */
+.footer-main {
+    background-color: #0d1117 !important; /* Warna gelap yang lebih modern */
+}
+
+.text-warning {
+    color: #f7931e !important; /* Sesuaikan dengan oranye brand Anda */
+}
+
+.x-small {
+    font-size: 0.75rem;
+}
+
+.hover-link {
+    transition: color 0.3s ease;
+}
+
+.hover-link:hover {
+    color: #f7931e !important;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Responsivitas Map */
+.map-box {
+    transition: transform 0.3s ease;
+}
+
+.map-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Penyesuaian TripAdvisor Container */
+.ta-container {
+    border-bottom: 5px solid #34e0a1; /* Aksen hijau TripAdvisor */
+}
+
+@media (max-width: 991.98px) {
+    .ta-container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
     }
 }
