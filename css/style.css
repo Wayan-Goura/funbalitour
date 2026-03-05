@@ -850,3 +850,122 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
         margin-top: 2rem;
     }
 }
+/* section tanyajawab */
+/* Warna Custom */
+.text-orange { color: #f7931e !important; }
+.bg-soft-orange { background-color: rgba(247, 147, 30, 0.1); }
+
+/* FAQ Styling */
+.custom-faq-grid .accordion-button {
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.custom-faq-grid .accordion-button:not(.collapsed) {
+    color: #f7931e;
+    box-shadow: none;
+}
+
+.custom-faq-grid .accordion-item {
+    transition: transform 0.3s ease;
+}
+
+.custom-faq-grid .accordion-item:hover {
+    transform: translateY(-3px);
+}
+
+/* Image Composition Styling */
+.bg-orange-circle {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(247,147,30,0.15) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.image-stack-new img {
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+    height: 100%;
+}
+
+/* tourdetail */
+/* FUN BALI TOUR BRANDING */
+:root {
+    --brand-orange: #f7931e;
+    --dark-text: #2d2d2d;
+}
+
+.fw-800 { font-weight: 800; }
+.text-orange { color: var(--brand-orange) !important; }
+.bg-soft-orange { background-color: rgba(247, 147, 30, 0.1); }
+.bg-light-orange { background-color: #fff9f2; }
+
+.btn-orange {
+    background: var(--brand-orange);
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    background: #d67b12;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* CONTENT CARD STYLE */
+.content-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.05);
+}
+
+.border-orange-top {
+    border-top: 4px solid var(--brand-orange);
+}
+
+/* LIST CUSTOMIZATION */
+.list-tour {
+    list-style: none;
+    padding-left: 0;
+}
+.list-tour li::before {
+    content: "•";
+    color: var(--brand-orange);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+}
+
+.list-tour.check li::before {
+    content: "✓";
+    color: #198754;
+}
+
+/* STEP NUMBER */
+.step-num {
+    background: var(--brand-orange);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+.bg-orange {
+    background-color: #f7931e !important;
+}
+
+/* Membuat icon di dalam box hitam tetap terlihat cerah */
+.bg-dark .bg-soft-orange {
+    background-color: rgba(247, 147, 30, 0.2) !important;
+}
+
+.x-small { font-size: 11px; }
