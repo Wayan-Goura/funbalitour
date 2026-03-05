@@ -353,14 +353,14 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 
 @media (max-width: 991.98px) {
     .logo-img {
-        height: 200px !important; 
+        height: 110px !important; 
         width: auto;
     }
 
     .hamburger-btn .bar {
-        width: 90px;
-        height: 20px;
-        margin: 7px 0;
+        width: 40px;
+        height: 10px;
+        margin: 3px 0;
         background-color: #333;
     }
     .custom-offcanvas {
@@ -386,14 +386,14 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     }
 
     .custom-offcanvas .offcanvas-body {
-        padding-top: 240px !important; 
+        padding-top: 140px !important; 
         padding-left: 40px !important;
         padding-right: 40px !important;
         overflow-y: auto;              
     }
 
     .custom-offcanvas .offcanvas-header img {
-        height: 80px; 
+        height: 20px; 
         width: auto;
     }
 }
@@ -409,7 +409,7 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     }
 
     .mobile-nav-links li a {
-        font-size: 2.6rem !important; 
+        font-size: 1.6rem !important; 
         font-weight: 700;
         text-transform: uppercase;
         color: var(--text-color);
@@ -432,7 +432,7 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     }
 
     .submenu-mobile li a {
-        font-size: 2.5rem !important;
+        font-size: 1.5rem !important;
         font-weight: 500;
         text-transform: capitalize;
         color: #666;
@@ -582,6 +582,57 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     .main-title { font-size: 3.5rem; }
     .slider-wrapper-blurred { -webkit-mask-image: none; mask-image: none; }
 
+    /* Styling Kartu Paket */
+.package-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #fff;
+    -webkit-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -ms-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+/* Navigasi Fixed */
+.nav-arrow-fixed {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-arrow-fixed:hover {
+    background: var(--primary-orange);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Helper Class */
+.text-orange { color: #D84B20 !important; }
+.fw-800 { font-weight: 800; }
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .nav-arrow-fixed {
+        width: 35px;
+        height: 35px;
+    }
+    .swiper-container-wrapper {
+        padding: 0 10px !important;
+    }
+}
+
     /* ABOUT */
     .content-wrapper {
         display: flex !important;
@@ -607,5 +658,136 @@ body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
     }
     .main-about {
         padding: 40px 15px;
+    }
+}
+
+/* --- MINIMAL HOME JOURNAL STYLING --- */
+.italic {
+    font-family: 'Georgia', serif; /* Memberikan kesan tulisan tangan/jurnal */
+}
+
+.journal-text-wrapper {
+    transition: all 0.3s ease;
+}
+
+.journal-text-wrapper:hover {
+    border-color: #1a1a1a !important; /* Berubah warna saat di-hover */
+}
+
+.vr {
+    width: 1px;
+    height: 40px;
+    background-color: #dee2e6;
+}
+
+/* Membuat foto sedikit lebih estetik */
+.object-fit-cover {
+    object-fit: cover;
+}
+
+@media (max-width: 991px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    .journal-content {
+        text-align: center;
+    }
+    .journal-text-wrapper {
+        border-start: none !important;
+        border-top: 3px solid var(--primary-orange);
+        padding-left: 0 !important;
+        padding-top: 20px;
+    }
+    .justify-content-center-mobile {
+        justify-content: center;
+    }
+}
+/* --- BLOG SECTION CUSTOM STYLING --- */
+.bg-dark-gradient {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+}
+
+.featured-blog {
+    transition: all 0.4s ease;
+}
+
+.featured-blog:hover img {
+    transform: scale(1.05);
+}
+
+.blog-side-item {
+    transition: all 0.3s ease;
+    border: 1px solid transparent !important;
+}
+
+.blog-side-item:hover {
+    border-color: #D84B20 !important;
+    transform: translateX(10px);
+    background-color: #fff9f7;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.text-truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+    .featured-blog .display-6 {
+        font-size: 1.5rem;
+    }
+}
+
+/* FOOTER */
+/* Gaya Khusus Footer */
+.footer-main {
+    background-color: #0d1117 !important; /* Warna gelap yang lebih modern */
+}
+
+.text-warning {
+    color: #f7931e !important; /* Sesuaikan dengan oranye brand Anda */
+}
+
+.x-small {
+    font-size: 0.75rem;
+}
+
+.hover-link {
+    transition: color 0.3s ease;
+}
+
+.hover-link:hover {
+    color: #f7931e !important;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Responsivitas Map */
+.map-box {
+    transition: transform 0.3s ease;
+}
+
+.map-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Penyesuaian TripAdvisor Container */
+.ta-container {
+    border-bottom: 5px solid #34e0a1; /* Aksen hijau TripAdvisor */
+}
+
+@media (max-width: 991.98px) {
+    .ta-container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
     }
 }
