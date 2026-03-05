@@ -20,100 +20,358 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Fun Bali Tour</title>
+    <title>Tour Packages - Fun Bali Tour</title>
     
+    <style>
+        .header-tour-packages {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=2000') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .text-tour { font-size: 3.5rem; font-weight: 800; text-transform: uppercase; }
+        .text-orange { color: #f7931e; }
+        .secondary-text-tour { font-weight: 500; letter-spacing: 2px; }
+    </style>
   </head>
   <body>
-     <div data-include="../components/navbar.html"></div>
+    <div data-include="../components/navbar.html"></div>
 
-    <section class="header-about">
-      <div class="img">
-        <h2 class="text-about">Bali activities</h2>
-        <h4 class="secondary-text-about">Home - bali activities</h4>
+    <section class="header-tour-packages">
+      <div class="container">
+        <h2 class="text-tour">Our Bali <span class="text-orange">Activiti</span></h2>
+        <h4 class="secondary-text-tour">Home - Bali activiti</h4>
       </div>
     </section>
 
-    <div class="bali-activities">
-  <div class="card">
-    <img src="taro-elephant-image.jpg" alt="Taro Elephant Tour">
-    <div class="tags">
-      <span>10 Hours</span> | <span>Private Tour</span> | <span>Friendly Drivers</span> | <span>Mineral Water</span>
-    </div>
-    <div class="card-body">
-      <h3>Taro Elephant Tour</h3>
-      <p>Embark on a journey of wonder and majesty with our Taro Elephant Tour!...</p>
-      <div class="price-action">
-        <span class="price">IDR 340K <span>/pax</span></span>
-        <a href="#" class="btn-read">READ MORE</a>
-      </div>
-    </div>
-  </div>
+    <section class="main-packages py-5">
+        <div class="container">
+            </div>
+    </section>
+    <section class="packages-section py-5 bg-white">
+    <div class="container py-md-5">
+        <div class="row row-cols-2 row-cols-md-3 g-3 g-md-4">
+            
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/ayungrafting6.webp" class="card-img-top card-img-custom" alt="Ubud Tour">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Ayung River Rafting</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Pacu adrenalin Anda menelusuri derasnya sungai Ayung di Ubud.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800">IDR 550K/Pack</span>
+                                </div>
+                                <a href="detail1.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <div class="card">
-    <img src="bali-zoo-image.jpg" alt="Bali Zoo">
-    <div class="tags">
-      <span>10 Hours</span> | <span>Private Tour</span> | <span>Friendly Drivers</span> | <span>Mineral Water</span>
-    </div>
-    <div class="card-body">
-      <h3>Bali Zoo</h3>
-      <p>Experience the wonder of Bali Zoo, where adventure meets conservation!...</p>
-      <div class="price-action">
-        <span class="price">IDR 395K <span>/pax</span></span>
-        <a href="#" class="btn-read">READ MORE</a>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/jimbaran3.webp" class="card-img-top card-img-custom" alt="Nusa Penida">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Jimbaran Dinner</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Makan malam romantis di tepi pantai.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800">IDR 850K/Pack</span>
+                                </div>
+                                <a href="detail2.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/uluwatu.jpg" class="card-img-top card-img-custom" alt="Uluwatu Sunset">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Hidden Waterfall</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Menonton tari Kecak di tepi tebing saat matahari terbenam yang magis.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800">IDR 450K/Pack</span>
+                                </div>
+                                <a href="detail3.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/bedugul.jpg" class="card-img-top card-img-custom" alt="Bedugul Tour">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Island Hopping</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Pura Ulun Danu Beratan dan sunset indah di Pura Tanah Lot.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800">IDR 600K/Pack</span>
+                                </div>
+                                <a href="detail4.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/batur.jpg" class="card-img-top card-img-custom" alt="Snorkeling">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Besakih Temple</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Petualangan bawah laut melihat kura-kura dan terumbu karang warna-warni.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800">IDR 500K/Pack</span>
+                                </div>
+                                <a href="detail5.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/batur.jpg" class="card-img-top card-img-custom" alt="Mount Batur">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Besakih Temple</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Mendaki gunung api aktif untuk melihat sunrise terbaik di Bali.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800">IDR 750K/Pack</span>
+                                </div>
+                                <a href="detail6.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-2 bg-light">
+    <div class="container py-md-5">
+        
+        <div class="text-center mb-5">
+            <h6 class="text-uppercase fw-bold" style="color: #D84B20; letter-spacing: 2px;">Why Choose Us</h6>
+            <h2 class="fw-800 display-5 mb-3">Your Trusted <span style="color: #D84B20;">Travel Partner</span></h2>
+            <p class="text-muted mx-auto" style="max-width: 700px;">Kami berkomitmen memberikan pengalaman liburan terbaik di Bali dengan layanan personal, aman, dan tak terlupakan.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-3 text-center text-md-start custom-hover">
+                    <div class="card-body">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-opacity-10 rounded-3 mb-3" style="width: 50px; height: 50px; background-color: #D84B20; color: #D84B20;">
+                            <i class="bi bi-person-badge-fill fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Local Guide</h5>
+                        <p class="text-muted small mb-0">Dipandu oleh putra daerah yang berpengalaman mengenal setiap sudut Bali.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-3 text-center text-md-start custom-hover">
+                    <div class="card-body">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-opacity-10 rounded-3 mb-3" style="width: 50px; height: 50px; background-color: #D84B20; color: #D84B20;">
+                            <i class="bi bi-calendar-check-fill fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Flexible Trip</h5>
+                        <p class="text-muted small mb-0">Atur jadwal perjalanan sesuai keinginan Anda tanpa terikat rombongan lain.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-3 text-center text-md-start custom-hover">
+                    <div class="card-body">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-opacity-10 rounded-3 mb-3" style="width: 50px; height: 50px; background-color: #D84B20; color: #D84B20;">
+                            <i class="bi bi-shield-check-fill fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Safe Journey</h5>
+                        <p class="text-muted small mb-0">Armada terbaru dan standar keselamatan tinggi untuk kenyamanan Anda.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-3 text-center text-md-start custom-hover">
+                    <div class="card-body">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-opacity-10 rounded-3 mb-3" style="width: 50px; height: 50px; background-color: #D84B20; color: #D84B20;">
+                            <i class="bi bi-whatsapp fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Easy Booking</h5>
+                        <p class="text-muted small mb-0">Proses pemesanan cepat dan konsultasi gratis via WhatsApp.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-4">
+                <div class="rounded-5 overflow-hidden position-relative d-flex align-items-center" style="min-height: 350px;">
+                    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: url('images/bali-temple.jpg') center/cover; z-index: 1;"></div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)); z-index: 2;"></div>
+                    
+                    <div class="position-relative p-5 text-white" style="z-index: 3; max-width: 700px;">
+                        <h2 class="display-4 fw-bold">Let's Make Your Bali Trip Unforgettable</h2>
+                        <p class="lead mb-4">Ribuan wisatawan telah mempercayakan perjalanan mereka kepada kami.</p>
+                        <a href="#" class="btn btn-lg px-4 py-2 fw-bold" style="background-color: #D84B20; color: white; border-radius: 50px;">Contact Us Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="faq-modern-section py-5 overflow-hidden" style="background-color: #fafafa;">
+    <div class="container py-md-5">
+        <div class="row g-5 align-items-center">
+            
+            <div class="col-lg-7 order-2 order-lg-1">
+                <div class="pe-lg-5">
+                    <div class="badge bg-soft-orange text-orange px-3 py-2 rounded-pill mb-3 fw-bold small">
+                        TANYA JAWAB UMUM
+                    </div>
+                    <h2 class="display-5 fw-800 mb-4">Butuh Informasi <span class="text-orange">Lebih Lanjut?</span></h2>
+                    
+                    <div class="accordion custom-faq-grid" id="faqNewLayout">
+                        
+                        <div class="accordion-item mb-3 border-0 shadow-sm rounded-4 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold p-4" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                                    <i class="bi bi-question-circle text-orange me-3"></i> Paket apa yang paling direkomendasikan?
+                                </button>
+                            </h2>
+                            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqNewLayout">
+                                <div class="accordion-body p-4 pt-0 text-muted">
+                                    Untuk kunjungan pertama, kami sangat menyarankan <strong>Ubud Cultural Tour</strong> atau <strong>Nusa Penida West</strong> karena mencakup ikon wisata Bali yang paling favorit.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3 border-0 shadow-sm rounded-4 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold p-4" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                                    <i class="bi bi-camera text-orange me-3"></i> Apakah driver bisa membantu mengambil foto?
+                                </button>
+                            </h2>
+                            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqNewLayout">
+                                <div class="accordion-body p-4 pt-0 text-muted">
+                                    Tentu! Driver kami sudah terlatih untuk mengambil foto dan video di spot-spot terbaik Bali agar konten media sosial Anda terlihat profesional.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3 border-0 shadow-sm rounded-4 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold p-4" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                                    <i class="bi bi-shield-check text-orange me-3"></i> Bagaimana jika cuaca buruk saat jadwal tour?
+                                </button>
+                            </h2>
+                            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqNewLayout">
+                                <div class="accordion-body p-4 pt-0 text-muted">
+                                    Keamanan Anda adalah prioritas. Jika cuaca tidak memungkinkan (terutama untuk trekking atau snorkeling), kita bisa menjadwalkan ulang atau mengganti rute ke destinasi *indoor* yang tetap menarik.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm rounded-4 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold p-4" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                                    <i class="bi bi-shield-check text-orange me-3"></i> Bagaimana jika cuaca buruk saat jadwal tour?
+                                </button>
+                            </h2>
+                            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqNewLayout">
+                                <div class="accordion-body p-4 pt-0 text-muted">
+                                    Keamanan Anda adalah prioritas. Jika cuaca tidak memungkinkan (terutama untuk trekking atau snorkeling), kita bisa menjadwalkan ulang atau mengganti rute ke destinasi *indoor* yang tetap menarik.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm rounded-4 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold p-4" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                                    <i class="bi bi-shield-check text-orange me-3"></i> Bagaimana jika cuaca buruk saat jadwal tour?
+                                </button>
+                            </h2>
+                            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqNewLayout">
+                                <div class="accordion-body p-4 pt-0 text-muted">
+                                    Keamanan Anda adalah prioritas. Jika cuaca tidak memungkinkan (terutama untuk trekking atau snorkeling), kita bisa menjadwalkan ulang atau mengganti rute ke destinasi *indoor* yang tetap menarik.
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 order-1 order-lg-2">
+                <div class="image-stack-new position-relative">
+                    <div class="bg-orange-circle position-absolute top-50 start-50 translate-middle"></div>
+                    
+                    <div class="row g-3">
+                        <div class="col-7">
+                            <img src="/images/ubud.jpg" class="img-fluid rounded-5 shadow-lg mb-3 mt-5" alt="Bali">
+                        </div>
+                        <div class="col-5">
+                            <img src="/images/bedugul.jpg" class="img-fluid rounded-5 shadow-lg mb-3" alt="Tour">
+                            <img src="/images/bluelagon.jpg" class="img-fluid rounded-5 shadow-lg" alt="Culture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
     <div data-include="../components/footer.html"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var swiperHero = new Swiper(".mySwiper", {
-                slidesPerView: 3, 
-                centeredSlides: true,
-                spaceBetween: 50, 
-                loop: true,
-                speed: 1000,
-                grabCursor: true,
-                navigation: { nextEl: ".next-btn", prevEl: ".prev-btn" },
-                breakpoints: {
-                    567: { slidesPerView: 3, spaceBetween: 70 },
-                    992: { slidesPerView: 3, spaceBetween: 50 }
-                }
-            });
-
-            var swiperPackages = new Swiper(".packageSwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            speed: 600,
-            grabCursor: true,      // Kursor berubah jadi tangan agar bisa di-drag
-            simulateTouch: true,   // Memungkinkan scroll dengan klik tahan kursor
-            navigation: { 
-                nextEl: ".next-package", 
-                prevEl: ".prev-package" 
-            },
-            breakpoints: {
-                // Di HP menampilkan 1.2 slide agar user tahu itu bisa di-scroll
-                320: { slidesPerView: 1.1, spaceBetween: 15 }, 
-                576: { slidesPerView: 2, spaceBetween: 20 },
-                992: { slidesPerView: 3, spaceBetween: 25 },
-                1400: { slidesPerView: 4, spaceBetween: 30 }
-            }
-        });
-        });
-
         document.addEventListener("DOMContentLoaded", function () {
             const includes = document.querySelectorAll("[data-include]");
             includes.forEach(el => {
                 const file = el.getAttribute("data-include");
-                fetch(file).then(res => res.text()).then(data => { el.innerHTML = data; }).catch(err => console.error(err));
+                fetch(file)
+                    .then(res => {
+                        if(!res.ok) throw new Error("File not found");
+                        return res.text();
+                    })
+                    .then(data => { el.innerHTML = data; })
+                    .catch(err => console.error("Error loading component:", err));
             });
         });
     </script>
-    <script src="js/script.js"></script> 
+    <script src="../js/script.js"></script> 
+  </body>
+</html>

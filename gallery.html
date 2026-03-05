@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Tour Packages - Fun Bali Tour</title>
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #ff7a18 0%, #ff512f 100%);
+            --bg-gradient: linear-gradient(135deg, #f9fafb 0%, #eff6ff 50%, #f0fdfa 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .header-tour-packages {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=2000') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .text-tour { font-size: 3.5rem; font-weight: 800; text-transform: uppercase; }
+        .text-orange { color: #f7931e; }
+        .secondary-text-tour { font-weight: 500; letter-spacing: 2px; }
+    </style>
+  </head>
+  <body>
+    <div data-include="components/navbar.html"></div>
+
+    <section class="header-tour-packages">
+      <div class="container">
+        <h2 class="text-tour">Our Tour <span class="text-orange">Galerry</span></h2>
+        <h4 class="secondary-text-tour">Home - Gallery</h4>
+      </div>
+    </section>
+
+<section class="gallery-section">
+        <div class="bg-circle bg-circle-1"></div>
+        <div class="bg-circle bg-circle-2"></div>
+
+        <div class="container">
+            <div class="gallery-header">
+                <h2 class="gallery-title">Our Gallery</h2>
+                <p class="gallery-subtitle">
+                    Explore the breathtaking beauty of Bali through our curated collection
+                </p>
+            </div>
+
+            <div class="category-filters text-center">
+                <button class="btn btn-category active" data-category="All">All</button>
+                <button class="btn btn-category" data-category="Beaches">Beaches</button>
+                <button class="btn btn-category" data-category="Temples">Temples</button>
+                <button class="btn btn-category" data-category="Nature">Nature</button>
+                <button class="btn btn-category" data-category="Culture">Culture</button>
+                <button class="btn btn-category" data-category="Adventure">Adventure</button>
+            </div>
+
+            <div class="row gallery-grid" id="galleryGrid"></div>
+            <div class="empty-state d-none" id="emptyState">
+                <p>No images found in this category</p>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close-lightbox" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                    <img class="lightbox-image" id="lightboxImage" src="" alt="">
+                    <div class="lightbox-info">
+                        <h3 class="lightbox-title" id="lightboxTitle"></h3>
+                        <div id="lightboxTags"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+
+    <script>
+        const images = [
+            {
+                url: 'https://images.unsplash.com/photo-1642868504628-7886ebd6f17d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwYmVhY2glMjBibHVlJTIwb2NlYW58ZW58MXx8fHwxNzcyNzI5MTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Beach Blue Ocean',
+                category: ['Beaches'],
+                title: 'Crystal Blue Waters'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1722104870041-b6effc3da46f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwc3Vuc2V0JTIwb2NlYW4lMjB0cm9waWNhbHxlbnwxfHx8fDE3NzI3MjkxMDV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Sunset Ocean',
+                category: ['Beaches'],
+                title: 'Golden Sunset'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1734546862606-cfbd6c62a094?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwdGVtcGxlJTIwc2FjcmVkJTIwYW5jaWVudHxlbnwxfHx8fDE3NzI3MjkxMDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Temple Ancient',
+                category: ['Temples', 'Culture'],
+                title: 'Sacred Temple'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1745739193791-c2d4153f5e9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwdGVtcGxlJTIwY2VyZW1vbnklMjBvZmZlcmluZ3N8ZW58MXx8fHwxNzcyNzI5MTA2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Temple Ceremony',
+                category: ['Temples', 'Culture'],
+                title: 'Temple Offerings'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1771766995256-1618791109d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwdHJhZGl0aW9uYWwlMjBhcmNoaXRlY3R1cmUlMjBnYXRlfGVufDF8fHx8MTc3MjcyOTEwN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Traditional Architecture',
+                category: ['Temples', 'Culture'],
+                title: 'Temple Gateway'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1726473039977-845a26101d7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwcmljZSUyMHRlcnJhY2VzJTIwZ3JlZW58ZW58MXx8fHwxNzcyNzI4NTE4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Rice Terraces',
+                category: ['Nature'],
+                title: 'Rice Terraces'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1691422740547-2701175fc794?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwd2F0ZXJmYWxsJTIwanVuZ2xlJTIwbmF0dXJlfGVufDF8fHx8MTc3MjcyOTEwM3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Waterfall Jungle',
+                category: ['Nature', 'Adventure'],
+                title: 'Hidden Waterfall'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1677422238313-6e87757470fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwbW9ua2V5JTIwZm9yZXN0JTIwdWJ1ZHxlbnwxfHx8fDE3NzI3MjkxMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Monkey Forest',
+                category: ['Nature', 'Culture'],
+                title: 'Sacred Monkey Forest'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1674975459853-5db8a969dba5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwY29mZmVlJTIwcGxhbnRhdGlvbiUyMHRlcnJhY2VzfGVufDF8fHx8MTc3MjcyOTEwOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Coffee Plantation',
+                category: ['Nature', 'Culture'],
+                title: 'Coffee Plantation'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1698824554196-aa14b4983344?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwdHJhZGl0aW9uYWwlMjBkYW5jZSUyMHBlcmZvcm1hbmNlfGVufDF8fHx8MTc3MjcyOTEwNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Traditional Dance',
+                category: ['Culture'],
+                title: 'Traditional Dance'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1717065165653-bb853b7e6e7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwbWFya2V0JTIwY29sb3JmdWwlMjBsb2NhbHxlbnwxfHx8fDE3NzI3MjkxMDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Local Market',
+                category: ['Culture'],
+                title: 'Local Market'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1669901529685-8cdba1222953?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwdm9sY2FubyUyMG1vdW50YWluJTIwaGlraW5nfGVufDF8fHx8MTc3MjcyOTEwNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Volcano Hiking',
+                category: ['Adventure', 'Nature'],
+                title: 'Volcano Trek'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1654159157490-86c6ea254dcd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwc3VyZmluZyUyMHdhdmVzJTIwYmVhY2h8ZW58MXx8fHwxNzcyNzI5MTA2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Surfing',
+                category: ['Adventure', 'Beaches'],
+                title: 'Surfing Paradise'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1770535849271-b3caeb39a107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwZGl2aW5nJTIwdW5kZXJ3YXRlciUyMGNvcmFsfGVufDF8fHx8MTc3MjcyOTEwN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Diving Underwater',
+                category: ['Adventure', 'Beaches'],
+                title: 'Underwater World'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1699246549472-8e87a59aaab4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwY291cGxlJTIwcm9tYW50aWMlMjB2YWNhdGlvbnxlbnwxfHx8fDE3NzI3MjkxMDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Couple Romantic',
+                category: ['Culture'],
+                title: 'Romantic Getaway'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1557147209-50497a62b4e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwZmFtaWx5JTIwYmVhY2glMjBoYXBweXxlbnwxfHx8fDE3NzI3MjkxMDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+                alt: 'Bali Family Beach',
+                category: ['Beaches'],
+                title: 'Family Fun'
+            }
+        ];
+
+        let selectedCategory = 'All';
+        let lightboxModal;
+
+        const galleryGrid = document.getElementById('galleryGrid');
+        const emptyState = document.getElementById('emptyState');
+        const categoryButtons = document.querySelectorAll('.btn-category');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxTags = document.getElementById('lightboxTags');
+
+        // Initialize Bootstrap Modal
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightboxModalElement = document.getElementById('lightboxModal');
+            lightboxModal = new bootstrap.Modal(lightboxModalElement);
+        });
+        function renderGallery(category = 'All') {
+            const filteredImages = category === 'All' 
+                ? images 
+                : images.filter(img => img.category.includes(category));
+
+            galleryGrid.innerHTML = '';
+
+            if (filteredImages.length === 0) {
+                emptyState.classList.remove('d-none');
+                return;
+            } else {
+                emptyState.classList.add('d-none');
+            }
+
+            filteredImages.forEach((image, index) => {
+                const isLarge = index % 7 === 0 || index % 7 === 3;
+                
+                const col = document.createElement('div');
+                col.className = `col-lg-${isLarge ? '6' : '3'} col-md-${isLarge ? '6' : '4'} col-sm-6`;
+                
+                const item = document.createElement('div');
+                item.className = `gallery-item ${isLarge ? 'large' : ''}`;
+                item.style.animationDelay = `${index * 0.05}s`;
+                
+                item.innerHTML = `
+                    <img src="${image.url}" alt="${image.alt}" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="zoom-icon">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                        <div class="gallery-info">
+                            <h3 class="gallery-item-title">${image.title}</h3>
+                            <div>
+                                ${image.category.map(cat => `<span class="gallery-tag">${cat}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corner-accent"></div>
+                `;
+                
+                item.addEventListener('click', () => openLightbox(image));
+                col.appendChild(item);
+                galleryGrid.appendChild(col);
+            });
+        }
+
+        function openLightbox(image) {
+            lightboxImage.src = image.url;
+            lightboxImage.alt = image.alt;
+            lightboxTitle.textContent = image.title;
+            lightboxTags.innerHTML = image.category.map(cat => 
+                `<span class="lightbox-tag">${cat}</span>`
+            ).join('');
+            
+            lightboxModal.show();
+        }
+
+        categoryButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                selectedCategory = btn.dataset.category;
+                renderGallery(selectedCategory);
+            });
+        });
+
+        renderGallery();
+
+        
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiperHero = new Swiper(".mySwiper", {
+                slidesPerView: 3, 
+                centeredSlides: true,
+                spaceBetween: 50, 
+                loop: true,
+                speed: 1000,
+                grabCursor: true,
+                navigation: { nextEl: ".next-btn", prevEl: ".prev-btn" },
+                breakpoints: {
+                    567: { slidesPerView: 3, spaceBetween: 70 },
+                    992: { slidesPerView: 3, spaceBetween: 50 }
+                }
+            });
+
+            var swiperPackages = new Swiper(".packageSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            speed: 600,
+            grabCursor: true,      // Kursor berubah jadi tangan agar bisa di-drag
+            simulateTouch: true,   // Memungkinkan scroll dengan klik tahan kursor
+            navigation: { 
+                nextEl: ".next-package", 
+                prevEl: ".prev-package" 
+            },
+            breakpoints: {
+                // Di HP menampilkan 1.2 slide agar user tahu itu bisa di-scroll
+                320: { slidesPerView: 1.1, spaceBetween: 15 }, 
+                576: { slidesPerView: 2, spaceBetween: 20 },
+                992: { slidesPerView: 3, spaceBetween: 25 },
+                1400: { slidesPerView: 4, spaceBetween: 30 }
+            }
+        });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const includes = document.querySelectorAll("[data-include]");
+            includes.forEach(el => {
+                const file = el.getAttribute("data-include");
+                fetch(file).then(res => res.text()).then(data => { el.innerHTML = data; }).catch(err => console.error(err));
+            });
+        });
+    </script>
+    <script src="js/script.js"></script>
+    </body>
+</html>
