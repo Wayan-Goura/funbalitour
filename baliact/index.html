@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Fun Bali Tour</title>
+    
+  </head>
+  <body>
+     <div data-include="../components/navbar.html"></div>
+
+    <section class="header-about">
+      <div class="img">
+        <h2 class="text-about">Bali activities</h2>
+        <h4 class="secondary-text-about">Home - bali activities</h4>
+      </div>
+    </section>
+
+    <div class="bali-activities">
+  <div class="card">
+    <img src="taro-elephant-image.jpg" alt="Taro Elephant Tour">
+    <div class="tags">
+      <span>10 Hours</span> | <span>Private Tour</span> | <span>Friendly Drivers</span> | <span>Mineral Water</span>
+    </div>
+    <div class="card-body">
+      <h3>Taro Elephant Tour</h3>
+      <p>Embark on a journey of wonder and majesty with our Taro Elephant Tour!...</p>
+      <div class="price-action">
+        <span class="price">IDR 340K <span>/pax</span></span>
+        <a href="#" class="btn-read">READ MORE</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="bali-zoo-image.jpg" alt="Bali Zoo">
+    <div class="tags">
+      <span>10 Hours</span> | <span>Private Tour</span> | <span>Friendly Drivers</span> | <span>Mineral Water</span>
+    </div>
+    <div class="card-body">
+      <h3>Bali Zoo</h3>
+      <p>Experience the wonder of Bali Zoo, where adventure meets conservation!...</p>
+      <div class="price-action">
+        <span class="price">IDR 395K <span>/pax</span></span>
+        <a href="#" class="btn-read">READ MORE</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div data-include="../components/footer.html"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiperHero = new Swiper(".mySwiper", {
+                slidesPerView: 3, 
+                centeredSlides: true,
+                spaceBetween: 50, 
+                loop: true,
+                speed: 1000,
+                grabCursor: true,
+                navigation: { nextEl: ".next-btn", prevEl: ".prev-btn" },
+                breakpoints: {
+                    567: { slidesPerView: 3, spaceBetween: 70 },
+                    992: { slidesPerView: 3, spaceBetween: 50 }
+                }
+            });
+
+            var swiperPackages = new Swiper(".packageSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            speed: 600,
+            grabCursor: true,      // Kursor berubah jadi tangan agar bisa di-drag
+            simulateTouch: true,   // Memungkinkan scroll dengan klik tahan kursor
+            navigation: { 
+                nextEl: ".next-package", 
+                prevEl: ".prev-package" 
+            },
+            breakpoints: {
+                // Di HP menampilkan 1.2 slide agar user tahu itu bisa di-scroll
+                320: { slidesPerView: 1.1, spaceBetween: 15 }, 
+                576: { slidesPerView: 2, spaceBetween: 20 },
+                992: { slidesPerView: 3, spaceBetween: 25 },
+                1400: { slidesPerView: 4, spaceBetween: 30 }
+            }
+        });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const includes = document.querySelectorAll("[data-include]");
+            includes.forEach(el => {
+                const file = el.getAttribute("data-include");
+                fetch(file).then(res => res.text()).then(data => { el.innerHTML = data; }).catch(err => console.error(err));
+            });
+        });
+    </script>
+    <script src="js/script.js"></script> 
