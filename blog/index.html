@@ -19,77 +19,111 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Fun Bali Tour</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Tour Packages - Fun Bali Tour</title>
     
+    <style>
+        .header-tour-packages {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=2000') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .text-tour { font-size: 3.5rem; font-weight: 800; text-transform: uppercase; }
+        .text-orange { color: #f7931e; }
+        .secondary-text-tour { font-weight: 500; letter-spacing: 2px; }
+    </style>
   </head>
   <body>
-     <div data-include="components/navbar.html"></div>
+    <div data-include="../components/navbar.html"></div>
 
-    <section class="header-about">
-      <div class="img">
-        <h2 class="text-about">About Us</h2>
-        <h4 class="secondary-text-about">Home - About Us</h4>
+    <section class="header-tour-packages">
+      <div class="container">
+        <h2 class="text-tour">Our New <span class="text-orange">Blog</span></h2>
+        <h4 class="secondary-text-tour">Home - Blog</h4>
       </div>
     </section>
 
-    <section class="main-about">
-      <div class="content-wrapper">
-        <div class="left-col">
-            <h1>FUN<br />BALI<br />TOUR</h1>
-        <div class="title-underline"></div>
-        <p>
-          Your gateway to discovering the magic of Bali. We create unforgettable
-          journeys that blend adventure, culture, and natural beauty into
-          experiences you'll treasure forever. Lorem ipsum dolor sit amet
-          consectetur adipisicing.
-        </p>
-        <div class="info-box">
-          <h3>Why Choose Us?</h3>
-          <p>
-            At <span class="highlight">Fun Bali Tour</span>, we specialize in
-            crafting personalized travel experiences that go beyond typical
-            tourism. Our expert local guides bring years of knowledge and
-            passion, ensuring you discover both famous landmarks and hidden
-            treasures.
-          </p>
-          <p>
-            From the mystical temples of Ubud to the pristine beaches of Nusa
-            Dua, from adventurous volcano treks to serene rice terrace walks -
-            we design each tour with your dreams in mind. Let us transform your
-            Bali vacation into a story worth sharing.
-          </p>
+   <section class="py-5 bg-white">
+    <div class="container py-md-5">
+        <div class="row align-items-end mb-5">
+            <div class="col-md-8">
+                <h6 class="text-orange fw-bold text-uppercase mb-2" style="letter-spacing: 2px;">Update & News</h6>
+                <h2 class="display-5 fw-800">From Our <span class="text-orange">Journal</span></h2>
+                <p class="text-muted mb-0">Temukan panduan perjalanan, tips, dan berita terbaru seputar pariwisata di Bali.</p>
+            </div>
+            <div class="col-md-4 text-md-end d-none d-md-block">
+                <a href="blog-list.html" class="btn btn-outline-dark rounded-pill px-4 fw-bold">View All Posts</a>
+            </div>
         </div>
-        </div>
-        
-        <div class="right-col">
-        <div class="hero-images">
-                    <div class="image-main">
-                        <img src="https://images.unsplash.com/photo-1709614503171-c18df73d4078?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Bali Culture">
-                        <div class="image-overlay"></div>
-                        <div class="image-caption">Cultural Experiences</div>
-                    </div>
-                    
-                    <div class="image-row">
-                        <div class="image-small">
-                            <img src="https://images.unsplash.com/photo-1699246549472-8e87a59aaab4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Romantic Tour">
+
+        <div class="row g-4">
+            
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm rounded-5 overflow-hidden position-relative h-100 featured-blog" style="min-height: 380px;">
+                    <img src="../images/blog-main.jpg" class="position-absolute w-100 h-100 object-fit-cover" alt="Main Blog">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end p-4 p-md-5 bg-dark-gradient text-white">
+                        <div class="mb-3">
+                            <span class="badge bg-orange px-3 py-2 rounded-pill">Featured</span>
+                            <span class="ms-2 small opacity-75">March 02, 2026</span>
                         </div>
-                        <div class="image-small">
-                            <img src="https://images.unsplash.com/photo-1766818436606-5cfed3aa1191?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Family Fun">
-                        </div>
-                    </div>
-                    
-                    <div class="image-medium">
-                        <img src="https://images.unsplash.com/photo-1672837919448-3f03e0b04992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Natural Beauty">
-                        <div class="image-overlay"></div>
-                        <div class="image-caption">Natural Wonders</div>
+                        <h3 class="fw-bold mb-3">Panduan Lengkap Eksplorasi Nusa Penida: Tips Agar Tidak Kelelahan</h3>
+                        <a href="blog-detail-1.html" class="btn btn-light rounded-pill px-4 fw-bold w-fit">Read Full Story</a>
                     </div>
                 </div>
             </div>
-      </div>
-      </div>
-    </section>
-            <section class="py-2 bg-light">
+
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm rounded-5 overflow-hidden position-relative h-100 featured-blog" style="min-height: 380px;">
+                    <img src="../images/blog-side-1.jpg" class="position-absolute w-100 h-100 object-fit-cover" alt="Cuisine Blog">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end p-4 p-md-5 bg-dark-gradient text-white">
+                        <div class="mb-3">
+                            <span class="badge bg-orange px-3 py-2 rounded-pill">Cuisine</span>
+                            <span class="ms-2 small opacity-75">Feb 28, 2026</span>
+                        </div>
+                        <h3 class="fw-bold mb-3">5 Restoran Halal Terbaik di Kawasan Seminyak Bali</h3>
+                        <a href="blog-detail-2.html" class="btn btn-light rounded-pill px-4 fw-bold w-fit">Read Full Story</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm rounded-5 overflow-hidden position-relative h-100 featured-blog" style="min-height: 380px;">
+                    <img src="../images/blog-side-2.jpg" class="position-absolute w-100 h-100 object-fit-cover" alt="Adventure Blog">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end p-4 p-md-5 bg-dark-gradient text-white">
+                        <div class="mb-3">
+                            <span class="badge bg-orange px-3 py-2 rounded-pill">Adventure</span>
+                            <span class="ms-2 small opacity-75">Feb 25, 2026</span>
+                        </div>
+                        <h3 class="fw-bold mb-3">Waktu Terbaik Mendaki Gunung Batur Untuk Pemula</h3>
+                        <a href="blog-detail-3.html" class="btn btn-light rounded-pill px-4 fw-bold w-fit">Read Full Story</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm rounded-5 overflow-hidden position-relative h-100 featured-blog" style="min-height: 380px;">
+                    <img src="../images/blog-side-3.jpg" class="position-absolute w-100 h-100 object-fit-cover" alt="Tips Blog">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end p-4 p-md-5 bg-dark-gradient text-white">
+                        <div class="mb-3">
+                            <span class="badge bg-orange px-3 py-2 rounded-pill">Tips</span>
+                            <span class="ms-2 small opacity-75">Feb 20, 2026</span>
+                        </div>
+                        <h3 class="fw-bold mb-3">Cara Mendapatkan Harga Sewa Mobil Murah di Bali</h3>
+                        <a href="blog-detail-4.html" class="btn btn-light rounded-pill px-4 fw-bold w-fit">Read Full Story</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-2 bg-light">
     <div class="container py-md-5">
         
         <div class="text-center mb-5">
@@ -163,7 +197,7 @@
         </div>
     </div>
 </section>
-        <section class="faq-modern-section py-5 overflow-hidden" style="background-color: #fafafa;">
+<section class="faq-modern-section py-5 overflow-hidden" style="background-color: #fafafa;">
     <div class="container py-md-5">
         <div class="row g-5 align-items-center">
             
@@ -262,56 +296,26 @@
     </div>
 </section>
 
-    <div data-include="components/footer.html"></div>
+    <div data-include="../components/footer.html"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var swiperHero = new Swiper(".mySwiper", {
-                slidesPerView: 3, 
-                centeredSlides: true,
-                spaceBetween: 50, 
-                loop: true,
-                speed: 1000,
-                grabCursor: true,
-                navigation: { nextEl: ".next-btn", prevEl: ".prev-btn" },
-                breakpoints: {
-                    567: { slidesPerView: 3, spaceBetween: 70 },
-                    992: { slidesPerView: 3, spaceBetween: 50 }
-                }
-            });
-
-            var swiperPackages = new Swiper(".packageSwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            speed: 600,
-            grabCursor: true,      // Kursor berubah jadi tangan agar bisa di-drag
-            simulateTouch: true,   // Memungkinkan scroll dengan klik tahan kursor
-            navigation: { 
-                nextEl: ".next-package", 
-                prevEl: ".prev-package" 
-            },
-            breakpoints: {
-                // Di HP menampilkan 1.2 slide agar user tahu itu bisa di-scroll
-                320: { slidesPerView: 1.1, spaceBetween: 15 }, 
-                576: { slidesPerView: 2, spaceBetween: 20 },
-                992: { slidesPerView: 3, spaceBetween: 25 },
-                1400: { slidesPerView: 4, spaceBetween: 30 }
-            }
-        });
-        });
-
         document.addEventListener("DOMContentLoaded", function () {
             const includes = document.querySelectorAll("[data-include]");
             includes.forEach(el => {
                 const file = el.getAttribute("data-include");
-                fetch(file).then(res => res.text()).then(data => { el.innerHTML = data; }).catch(err => console.error(err));
+                fetch(file)
+                    .then(res => {
+                        if(!res.ok) throw new Error("File not found");
+                        return res.text();
+                    })
+                    .then(data => { el.innerHTML = data; })
+                    .catch(err => console.error("Error loading component:", err));
             });
         });
     </script>
-    <script src="js/script.js"></script> 
+    <script src="../js/script.js"></script> 
   </body>
 </html>
