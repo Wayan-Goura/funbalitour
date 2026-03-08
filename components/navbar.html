@@ -1,5 +1,5 @@
 <nav class="navbar-custom">
-    <div class="container-fluid px-3 px-md-5 d-flex align-items-center justify-content-between">
+    <div class="container-fluid px-4 px-md-5 d-flex align-items-center justify-content-between">
         
         <a class="navbar-brand-custom" href="#">
             <img src="/images/funbalitours.png" alt="Logo" class="logo-img">
@@ -36,30 +36,48 @@
         </div>
     </div>
 </nav>
-
 <div class="offcanvas offcanvas-top custom-offcanvas" tabindex="-1" id="offcanvasNavbar">
-    <div class="offcanvas-header justify-content-end px-4 pt-4">
-    </div>
-    <div class="offcanvas-body">
-        <ul class="mobile-nav-links">
-            <li><a href="#">Home</a></li>
+    <!-- <div class="offcanvas-header justify-content-end px-4 pt-3">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div> -->
+    
+    <div class="offcanvas-body pt-5">
+        <ul class="mobile-nav-links list-unstyled">
+            <li><a href="/home.html" class="nav-link-item">Home</a></li>
+            
             <li class="mobile-dropdown">
-                <a class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapseTours" role="button" aria-expanded="false">
-                    Tours <i class="bi bi-plus-lg"></i>
+                <a class="nav-link-item d-flex justify-content-between align-items-center" 
+                   data-bs-toggle="collapse" href="#collapseTours" role="button" aria-expanded="false">
+                    Tours <i class="bi bi-chevron-down small"></i>
                 </a>
                 <div class="collapse" id="collapseTours">
-                    <ul class="submenu-mobile">
-                        <li><a href="#">Tour Packages</a></li>
-                        <li><a href="#">Bali Activities</a></li>
+                    <ul class="submenu-mobile list-unstyled ps-3">
+                        <li><a href="/tourpack/index.html">Tour Packages</a></li>
+                        <li><a href="/baliact/index.html">Bali Activities</a></li>
                     </ul>
                 </div>
             </li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About</a></li>
-            <li class="mt-4 px-2 pb-4">
-                <a href="#" class="btn-reservasi w-100 text-center py-3">RESERVASI SEKARANG</a>
+            
+            <li><a href="/blog/index.html" class="nav-link-item">Blog</a></li>
+            <li><a href="/gallery.html" class="nav-link-item">Gallery</a></li>
+            <li><a href="/about.html" class="nav-link-item">About</a></li>
+            
+            <li class="mt-5 px-2">
+                <a href="#" class="btn-reservasi w-100 d-block text-center">RESERVASI SEKARANG</a>
             </li>
         </ul>
     </div>
 </div>
+
+<script>
+const offcanvas = document.getElementById('offcanvasNavbar');
+
+offcanvas.addEventListener('show.bs.offcanvas', function () {
+    document.body.style.overflow = "hidden";
+});
+
+offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+    document.body.style.overflow = "";
+});
+</script>
+

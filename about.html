@@ -19,17 +19,115 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Fun Bali Tour</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>About - Fun Bali Tour</title>
     
+    <style>
+        .header-tour-packages {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=2000') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+        .text-tour { font-size: 3.5rem; font-weight: 800; text-transform: uppercase; }
+        .text-orange { color: #f7931e; }
+        .secondary-text-tour { font-weight: 500; letter-spacing: 2px; }
+
+        @media (max-width: 576px) {
+            .header-tour-packages { height: 300px; }
+            .text-tour { font-size: 2.5rem; }
+
+        }
+        /* Penyesuaian Global untuk Mobile */
+@media (max-width: 576px) {
+    /* Header Section */
+    .header-tour-packages { 
+        height: 250px; /* Sedikit lebih pendek agar konten bawah terlihat */
+    }
+    .text-tour { 
+        font-size: 2rem; /* Ukuran lebih proporsional di layar kecil */
+    }
+    .secondary-text-tour {
+        font-size: 0.9rem;
+    }
+
+    /* Main About Section */
+    .main-about {
+        padding: 40px 15px;
+    }
+    .left-col h1 {
+        font-size: 2.5rem; /* Ukuran judul Fun Bali Tour */
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+    
+    /* Stats Section */
+    .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+        margin-top: 30px;
+        
+    }
+    .stat-item {
+        padding: 15px;
+        text-align: center;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .stat-item:last-child {
+    grid-column: 1 / span 2; /* Dia akan memenuhi lebar 2 kolom */
+    /* Opsional: Jika ingin ukurannya tetap kecil tapi di tengah, tambahkan ini: */
+    justify-self: center;
+    width: 50%; /* Atau sesuaikan lebarnya */
+}
+
+    /* Image Grid Mobile */
+    .hero-images {
+        margin-top: 40px; /* Jarak agar tidak menempel dengan teks */
+    }
+    .image-row {
+        display: flex;
+        gap: 10px;
+    }
+    .image-small img, .image-main img, .image-medium img {
+        border-radius: 20px !important;
+    }
+
+    /* FAQ & Why Choose Us */
+    .display-5 {
+        font-size: 1.8rem !important;
+    }
+    .accordion-button {
+        padding: 1rem !important;
+        font-size: 0.95rem;
+    }
+}
+
+/* Tambahan agar gambar tetap rapi */
+.hero-images img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+.image-main { margin-bottom: 15px; }
+.image-row { margin-bottom: 15px; }
+    </style>
   </head>
   <body>
      <div data-include="components/navbar.html"></div>
 
-    <section class="header-about">
-      <div class="img">
-        <h2 class="text-about">About Us</h2>
-        <h4 class="secondary-text-about">Home - About Us</h4>
+    <section class="header-tour-packages">
+      <div class="container">
+        <h2 class="text-tour"><span class="text-orange">About Us</span></h2>
+        <h4 class="secondary-text-tour">Home - About Us</h4>
       </div>
     </section>
 
