@@ -37,6 +37,41 @@
         .text-tour { font-size: 3.5rem; font-weight: 800; text-transform: uppercase; }
         .text-orange { color: #f7931e; }
         .secondary-text-tour { font-weight: 500; letter-spacing: 2px; }
+            .corner-ribbon-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px; /* Sedikit lebih besar agar teks muat */
+        height: 150px;
+        overflow: hidden; /* Memotong bagian pita yang keluar kartu */
+        z-index: 10;
+        pointer-events: none; /* Agar tidak menghalangi klik pada gambar */
+    }
+
+    /* Elemen pita yang diputar */
+    .corner-ribbon-wrapper span {
+        position: absolute;
+        display: block;
+        width: 225px; /* Lebih lebar dari kontainer agar miringnya pas */
+        padding: 10px 0; /* Padding atas bawah agar pita terlihat besar */
+        background-color: #dc3545; /* Warna default (Merah) */
+        color: #fff;
+        font-weight: 800;
+        font-size: 0.85rem; /* Ukuran font sedikit lebih besar */
+        text-transform: uppercase;
+        text-align: center;
+        right: -55px; /* Posisi horizontal */
+        top: 25px; /* Posisi vertikal */
+        transform: rotate(45deg); /* Memutar pita 45 derajat */
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2); /* Bayangan agar terlihat timbul */
+        letter-spacing: 1px;
+    }
+
+    /* Variasi Warna Pita */
+    .ribbon-blue span { background-color: #0d6efd !important; }   /* Biru Bootstrap */
+    .ribbon-green span { background-color: #198754 !important; }  /* Hijau Bootstrap */
+    .ribbon-orange span { background-color: #fd7e14 !important; } /* Oranye */
+    .ribbon-purple span { background-color: #6f42c1 !important; } /* Ungu */
     </style>
   </head>
   <body>
@@ -49,11 +84,226 @@
       </div>
     </section>
 
-    <section class="main-packages py-5">
+    <section class="main-packages py-2">
         <div class="container">
             </div>
     </section>
-    <section class="packages-section py-5 bg-white">
+    <section class="packages-section py-3 bg-white">
+    <div class="container py-md-5">
+        <div class="row row-cols-2 row-cols-md-3 g-3 g-md-4">
+            
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="corner-ribbon-wrapper">
+                        <span>New Disc %</span>
+                    </div>
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/ubudrtt.jpg" class="card-img-top card-img-custom" alt="Ubud Tour">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Ubud Serenity Escape</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Experience the peaceful charm of Ubud with its lush rice terraces, sacred temples, and vibrant culture. A perfect journey to relax, reconnect, and enjoy Bali’s natural beauty.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <small class="text-muted text-decoration-line-through d-block" style="font-size: 0.75rem;">IDR 900K</small>
+                                    <span class="price-text text-orange fw-800 fs-5">IDR 799K</span><span class="text-muted small">/Car</span>
+                                </div>
+                                <a href="detail1.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="corner-ribbon-wrapper ribbon-blue">
+                        <span>Hot Deal</span>
+                    </div>
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/lempuyangt.jpg" class="card-img-top card-img-custom" alt="Nusa Penida">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Eastern Bali Sacred</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Discover the spiritual side of Bali by visiting iconic temples and royal water palaces in the east. Capture breathtaking views and feel the island’s deep cultural essence.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <small class="text-muted text-decoration-line-through d-block" style="font-size: 0.75rem;">IDR 1.200K</small>
+                                    <span class="price-text text-orange fw-800 fs-5">IDR 1.100K</span><span class="text-muted small">/Car</span>
+                                </div>
+                                <a href="detail2.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="corner-ribbon-wrapper ribbon-red">
+                        <span>Discount %</span>
+                    </div>
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/padangpb.jpg" class="card-img-top card-img-custom" alt="Uluwatu Sunset">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Southern Coast Paradise</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Explore Bali’s stunning southern coastline, featuring dramatic cliffs, white sandy beaches, and unforgettable sunset views at Uluwatu Temple.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <small class="text-muted text-decoration-line-through d-block" style="font-size: 0.75rem;">IDR 1.200K</small>
+                                    <span class="price-text text-orange fw-800 fs-5">IDR 1.000K</span><span class="text-muted small">/Car</span>
+                                </div>
+                                <a href="detail3.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="corner-ribbon-wrapper ribbon-blue">
+                        <span>Hot Deal</span>
+                    </div>
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/sangehmk.jpg" class="card-img-top card-img-custom" alt="Bedugul Tour">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Hidden West Escape</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Uncover the untouched beauty of West Bali with its serene landscapes, local life, and hidden gems away from the crowds. A true escape into nature.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <small class="text-muted text-decoration-line-through d-block" style="font-size: 0.75rem;">IDR 1.200K</small>
+                                    <span class="price-text text-orange fw-800 fs-5">IDR 1.100K</span><span class="text-muted small">/Car</span>
+                                </div>
+                                <a href="detail4.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="corner-ribbon-wrapper ribbon-red">
+                        <span>New Disc %</span>
+                    </div>
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/legong.jpg" class="card-img-top card-img-custom" alt="Snorkeling">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Living Culture Experience</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Immerse yourself in authentic Balinese traditions, daily rituals, and local village life. Experience the true spirit and heritage of Bali.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <small class="text-muted text-decoration-line-through d-block" style="font-size: 0.75rem;">IDR 900K</small>
+                                    <span class="price-text text-orange fw-800 fs-5">IDR 599K</span><span class="text-muted small">/Car</span>
+                                </div>
+                                <a href="detail5.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="corner-ribbon-wrapper ribbon-blue">
+                        <span>New Deal</span>
+                    </div>
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/tegenungan.jpg" class="card-img-top card-img-custom" alt="Mount Batur">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Sacred Falls Experience</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Chase Bali’s most beautiful waterfalls hidden in the jungle. Enjoy fresh air, crystal-clear water, and a refreshing natural escape.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <small class="text-muted text-decoration-line-through d-block" style="font-size: 0.75rem;">IDR 900K</small>
+                                    <span class="price-text text-orange fw-800 fs-5">IDR 799K</span><span class="text-muted small">/Car</span>
+                                </div>
+                                <a href="detail6.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/klkbeach.jpg" class="card-img-top card-img-custom" alt="Mount Batur">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Penida Island Dream Tour</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Visit the breathtaking island of Nusa Penida, famous for its dramatic cliffs, turquoise waters, and iconic beaches. A must-do tropical adventure.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800 fs-5">IDR 1.300K</span><span class="text-muted small">/Pack</span>
+                                </div>
+                                <a href="detail7.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="corner-ribbon-wrapper ribbon-blue">
+                        <span>Super Deal</span>
+                    </div>
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/Keindahan udara Nusa Penida.png" class="card-img-top card-img-custom" alt="Mount Batur">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Ultimate Bali Experience</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Get the best of Bali in one unforgettable journey—combining culture, nature, and iconic destinations into a perfect all-in-one experience.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800 fs-5">Custom Price</span><span class="text-muted small">/Pack</span>
+                                </div>
+                                <a href="detail8.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm package-card rounded-4 overflow-hidden">
+                    <div class="corner-ribbon-wrapper ribbon-blue">
+                        <span>Super Deal</span>
+                    </div>
+                    <div class="ratio ratio-1x1 overflow-hidden">
+                        <img src="/images/sunrise.png" class="card-img-top card-img-custom" alt="Mount Batur">
+                    </div>
+                    <div class="card-body p-3 p-md-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-1 mb-md-2 text-truncate-1">Jeep Sunrise Tour</h5>
+                        <p class="text-muted small mb-3 d-none d-md-block">Start your day with an unforgettable adventure on our Jeep Sunrise Tour! Ride through stunning off-road tracks in a classic 4WD jeep and witness a magical sunrise from one of Bali’s most iconic viewpoints.</p>
+                        <div class="mt-auto pt-2 border-top">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                <div class="mb-2 mb-md-0">
+                                    <span class="price-text text-orange fw-800 fs-5">Custom Price</span><span class="text-muted small">/Pack</span>
+                                </div>
+                                <a href="detail9.html" class="btn btn-dark btn-sm rounded-pill px-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- <section class="packages-section py-5 bg-white">
     <div class="container py-md-5">
         <div class="row row-cols-2 row-cols-md-3 g-3 g-md-4">
             
@@ -217,7 +467,7 @@
 
         </div>
     </div>
-</section>
+</section> -->
     <section class="py-2 bg-light">
     <div class="container py-md-5">
         
