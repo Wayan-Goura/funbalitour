@@ -725,8 +725,8 @@ body {
   }
 
   .navbar-custom {
-    background: white;
-    padding: 10px 0;
+    background: #FDF5E6;
+    padding: 20px 0;
     transition: 0.3s ease;
     position: fixed;
   }
@@ -738,7 +738,7 @@ body {
 
   /* LOGO */
   .logo-img {
-    height: 40px;
+    height: 60px;
   }
 
   /* HAMBURGER */
@@ -784,6 +784,7 @@ body {
 /* isi menu */
 .offcanvas-body{
     padding: 20px 0;
+    
 }
 
 /* cegah body scroll */
@@ -805,6 +806,12 @@ body.offcanvas-open{
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
+  .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 50px;
+}
+
   .nav-link-item {
     display: block;
     padding: 15px 10px;
@@ -820,7 +827,7 @@ body.offcanvas-open{
   /* SUB MENU */
   .submenu-mobile li a {
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     display: block;
     font-size: 16px;
   }
@@ -831,6 +838,7 @@ body.offcanvas-open{
     width: 100%;
     z-index: 9999;
   }
+  
   .fixed-top,
   .sticky-top,
   .navbar {
