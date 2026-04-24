@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://funbalitour.com/sitemap.xml
