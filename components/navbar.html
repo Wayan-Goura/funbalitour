@@ -1,47 +1,57 @@
 <nav class="navbar-custom">
-    <div class="container-fluid px-4 px-md-5 d-flex align-items-center justify-content-between">
-        
-        <a class="navbar-brand-custom" href="#">
-            <img src="/images/funbalitours.png" alt="Logo" class="logo-img">
-        </a>
+  <div
+    class="container-fluid px-4 px-md-5 d-flex align-items-center justify-content-between"
+  >
+    <a class="navbar-brand-custom" href="#">
+      <img src="/images/funbalitours.png" alt="Logo" class="logo-img" />
+    </a>
 
-        <div class="nav-box-container d-none d-lg-flex">
-            <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li class="dropdown-custom">
-                    <a href="javascript:void(0)">Tours <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu-custom">
-
-                        <li><a href="/tourpack/index.html">Tour Packages</a></li>
-                        <li><a href="/baliact/index.html">Bali Activities</a></li>
-
-                    </ul>
-                </li>
-                <li><a href="/blog/index.html">Blog</a></li>
-                <li><a href="/gallery.html">Gallery</a></li>
-                <li><a href="/about.html">About</a></li>  
-            </ul>
-        </div>
+    <div class="nav-box-container d-none d-lg-flex">
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li class="dropdown-custom">
+          <a href="javascript:void(0)"
+            >Tours <i class="bi bi-chevron-down"></i
+          ></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="/tourpack/">Tour Packages</a></li>
+            <li><a href="/baliact/">Bali Activities</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/gallery">Gallery</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </div>
 
         <div class="nav-action-button d-none d-lg-block">
-            <a href="https://api.whatsapp.com/send?phone=6282266994441&text=Hello%20Fun%20Bali%20Tour!%20%F0%9F%8C%B4%0A%0AI%20have%20some%20questions%20about%20your%20tour%20services.%20Could%20you%20please%20help%20me%3F%20Thank%20you!" 
+            <a href="https://api.whatsapp.com/send?phone=+62 822-6699-4441&text=Hello%20Fun%20Bali%20Tour!%20%F0%9F%8C%B4%0A%0AI%20have%20some%20questions%20about%20your%20tour%20services.%20Could%20you%20please%20help%20me%3F%20Thank%20you!" 
             class="btn-reservasi"
             target="_blank">
                 <i class="bi bi-chat-dots-fill me-2"></i> RESERVE NOW
             </a>
         </div>
 
-        <div class="d-lg-none">
-            <button class="hamburger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </button>
-        </div>
+    <div class="d-lg-none">
+      <button
+        class="hamburger-btn"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+      >
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
     </div>
+  </div>
 </nav>
-<div class="offcanvas offcanvas-top custom-offcanvas" tabindex="-1" id="offcanvasNavbar">
-    <!-- <div class="offcanvas-header justify-content-end px-4 pt-3">
+<div
+  class="offcanvas offcanvas-top custom-offcanvas"
+  tabindex="-1"
+  id="offcanvasNavbar"
+>
+  <!-- <div class="offcanvas-header justify-content-end px-4 pt-3">
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div> -->
     
@@ -78,14 +88,14 @@
 </div>
 
 <script>
-const offcanvas = document.getElementById('offcanvasNavbar');
+  const offcanvas = document.getElementById("offcanvasNavbar");
 
-offcanvas.addEventListener('show.bs.offcanvas', function () {
+  offcanvas.addEventListener("show.bs.offcanvas", function () {
     document.body.style.overflow = "hidden";
-});
+  });
 
-offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+  offcanvas.addEventListener("hidden.bs.offcanvas", function () {
     document.body.style.overflow = "";
-});
+  });
 </script>
 
